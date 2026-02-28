@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "warehouse": "Warehouse",
+    "contact": "Contact",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "title": "Trusted Vehicle Auction Warehouse and Export Hub",
+    "subtitle": "Secure vehicle storage, inspection, container loading, and international shipping for auction vehicles.",
+    "cta1": "Request Storage Space",
+    "cta2": "Get Shipping Quote"
+  },
+  "stats": {
+    "vehicles": "Vehicles Processed",
+    "countries": "Countries Served",
+    "warehouses": "Warehouse Facilities",
+    "experience": "Years Experience"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive vehicle logistics solutions from auction to export",
+    "storage": {
+      "title": "Vehicle Storage & Yard Management",
+      "description": "Climate-controlled, monitored warehouse facilities with 24/7 security and surveillance systems."
+    },
+    "receiving": {
+      "title": "Auction Vehicle Receiving",
+      "description": "Efficient pickup and receiving of auction vehicles from all major auction houses nationwide."
+    },
+    "towing": {
+      "title": "Towing & Dispatch Coordination",
+      "description": "Professional towing and dispatch coordination for seamless vehicle pickup and delivery."
+    },
+    "container": {
+      "title": "Loading & Containerization",
+      "description": "Expert container loading with professional securing and lashing for safe ocean transit."
+    },
+    "trucking": {
+      "title": "Domestic Trucking",
+      "description": "Reliable domestic trucking services for vehicle transport across all major routes."
+    },
+    "shipping": {
+      "title": "International Shipping Support",
+      "description": "End-to-end shipping coordination to destinations across 50+ countries worldwide."
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "Trusted by logistics companies and auction buyers worldwide",
+    "items": {
+      "secure": { "title": "Secure Warehouse Facilities", "description": "State-of-the-art security with 24/7 surveillance and climate-controlled storage." },
+      "experienced": { "title": "Experienced Vehicle Handling", "description": "Trained professionals with years of expertise in auction vehicle logistics." },
+      "global": { "title": "Global Export Support", "description": "Seamless shipping coordination to over 50 countries worldwide." },
+      "integrated": { "title": "Integrated Logistics Services", "description": "End-to-end solutions from auction pickup to international delivery." },
+      "reliable": { "title": "Reliable & Professional Team", "description": "Dedicated team committed to timely, damage-free vehicle handling." }
+    }
+  },
+  "whoWeServe": {
+    "title": "Who We Serve",
+    "subtitle": "Delivering excellence to a diverse range of clients",
+    "clients": {
+      "auction": "Auto Auction Buyers",
+      "dealers": "Car Dealers",
+      "exporters": "Exporters",
+      "fleet": "Fleet Operators",
+      "logistics": "Logistics Companies",
+      "private": "Private Vehicle Owners"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "From auction to your doorstep — a seamless process",
+    "steps": {
+      "step1": { "title": "Vehicle Purchased", "description": "Vehicle is purchased from auction houses across the country." },
+      "step2": { "title": "Arrives at Warehouse", "description": "Vehicle is transported and received at our secure warehouse facility." },
+      "step3": { "title": "Inspection & Documentation", "description": "Complete vehicle inspection, photography, and documentation." },
+      "step4": { "title": "Secure Storage", "description": "Vehicle is stored in our climate-controlled, secure facility." },
+      "step5": { "title": "Container Loading", "description": "Professional container loading with proper securing methods." },
+      "step6": { "title": "Export Shipping", "description": "Vehicle ships to its global destination with full tracking." }
+    }
+  },
+  "warehouse": {
+    "title": "Our Warehouse Facilities",
+    "subtitle": "State-of-the-art storage and logistics infrastructure"
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Building the future of vehicle logistics since 2010",
+    "description": "We are a global leader in auction vehicle logistics, providing secure storage, expert handling, and reliable export services to clients worldwide.",
+    "timeline": {
+      "t1": { "year": "2010", "title": "Company Founded", "description": "Started with a single warehouse and a vision to transform vehicle logistics." },
+      "t2": { "year": "2014", "title": "Warehouse Expansion", "description": "Expanded to 3 facilities covering over 500,000 sq ft of storage space." },
+      "t3": { "year": "2018", "title": "Export Growth", "description": "Reached 30+ export destinations with streamlined customs processing." },
+      "t4": { "year": "2024", "title": "Global Operations", "description": "Now serving 50+ countries with state-of-the-art logistics technology." }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch for a custom logistics solution",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "service": "Select Service",
+    "message": "Your Message",
+    "send": "Send Message",
+    "info": {
+      "address": "1234 Logistics Blvd, Houston, TX 77001",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@auctionlogistics.com"
+    }
+  },
+  "footer": {
+    "description": "Global leader in auction vehicle storage and export logistics.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactInfo": "Contact Info",
+    "rights": "All rights reserved."
+  }
+}
