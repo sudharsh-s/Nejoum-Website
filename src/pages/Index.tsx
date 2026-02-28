@@ -11,6 +11,7 @@ import StatsSection from "@/components/StatsSection";
 import AboutStatsSection from "@/components/AboutStatsSection";
 import AwardsSection from "@/components/AwardsSection";
 import MissionSection from "@/components/MissionSection";
+import ServicesSlider from "@/components/ServicesSlider";
 
 
 import heroImg from '@/assets/bg-home.webp';
@@ -100,6 +101,8 @@ const Index = () => {
       <AboutStatsSection />
 
       <MissionSection />
+
+      <ServicesSlider />
 
       <AwardsSection />
 

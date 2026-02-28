@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import missionVideo from "@/assets/mission.mp4";
-import hagging_container from "@/assets/hagging_container.webp";
+import hagging_container from "@/assets/hagging_container.png";
 
 const MissionSection = () => {
 
@@ -67,7 +67,7 @@ const MissionSection = () => {
 
         </div>
       </section>
-      
+
       <section ref={imageRef} className="relative overflow-hidden">
         <motion.div
           style={{ y }}

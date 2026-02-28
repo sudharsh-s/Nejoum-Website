@@ -1,0 +1,108 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
+import "swiper/css";
+
+import serviceSlider1 from "@/assets/services/service-slider-1.jpg";
+import serviceSlider2 from "@/assets/services/service-slider-2.jpg";
+import serviceSlider3 from "@/assets/services/service-slider-3.jpg";
+import serviceSlider4 from "@/assets/services/service-slider-4.jpg";
+import serviceSlider5 from "@/assets/services/service-slider-5.jpg";
+
+const services = [
+  {
+    title: "Cargo shipping",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider1,
+  },
+  {
+    title: "Air freight",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider2,
+  },
+  {
+    title: "Customs brokerage",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider3,
+  },
+  {
+    title: "Warehouse solution",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider4,
+  },
+  {
+    title: "Freight forwarding",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider5,
+  },
+];
+
+const ServicesSlider = () => {
+  return (
+    <section className="bg-[#032d6b] py-24 overflow-hidden relative">
+
+      {/* Vertical Lines Background */}
+      <div className="absolute inset-0 flex justify-between px-[15%] pointer-events-none">
+        <div className="w-px bg-white/20"></div>
+        <div className="w-px bg-white/20"></div>
+        <div className="w-px bg-white/20"></div>
+      </div>
+
+      <div className="relative z-10 pl-24">
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={70}
+          slidesPerView={3}
+          breakpoints={{
+            0: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3.3 },
+          }}
+        >
+          {services.map((service, index) => (
+            <SwiperSlide key={index}>
+              <motion.div
+                whileHover="hover"
+                className="group text-white space-y-6"
+              >
+                <h3 className="text-3xl font-semibold">
+                  {service.title}
+                </h3>
+
+                <p className="text-white/70 max-w-sm">
+                  {service.desc}
+                </p>
+
+                {/* Animated Read More */}
+                <motion.div
+                  variants={{
+                    hover: { x: 10 },
+                  }}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <span className="text-white/80">Read More</span>
+                  <span className="transition-transform group-hover:translate-x-2">
+                    →
+                  </span>
+                </motion.div>
+
+                {/* Image */}
+                <div className="overflow-hidden mt-8">
+                  <motion.img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-[280px] object-cover"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </div>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSlider;
