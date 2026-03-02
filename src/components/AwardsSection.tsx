@@ -2,6 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 const awards = [
   {
@@ -18,7 +21,7 @@ const awards = [
   },
   {
     year: "2025",
-    title: "Sustainability in Logistics Award",
+    title: "Sustainability in Logistics",
     desc: "Reducing our carbon footprint through eco-friendly shipping practices.",
     org: "Green Transport Network",
   },
@@ -30,7 +33,7 @@ const awards = [
   },
   {
     year: "2025",
-    title: "Sustainability in Logistics Award",
+    title: "Sustainability in Logistics",
     desc: "Reducing our carbon footprint through eco-friendly shipping practices.",
     org: "Green Transport Network",
   },
@@ -48,15 +51,19 @@ const AwardsSection = () => {
             <p className="text-md text-primary mb-4 font-medium">
               ● Awards & Recognition
             </p>
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">
               Solutions to Keep <br /> Your Business Moving
             </h2>
           </div>
 
           {/* Custom Nav Buttons */}
-          <div className="hidden md:flex gap-4">
-            <div className="swiper-button-prev !static !w-10 !h-10 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer"></div>
-            <div className="swiper-button-next !static !w-10 !h-10 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer"></div>
+          <div className="hidden md:flex">
+            <div className="swiper-button-prev !static cursor-pointer">
+              <ArrowBackIosNewIcon className="text-black !w-7 !h-7" />
+            </div>
+            <div className="swiper-button-next !static cursor-pointer">
+              <ArrowForwardIosIcon className="text-black !w-7 !h-7" />
+            </div>
           </div>
         </div>
 
@@ -81,8 +88,8 @@ const AwardsSection = () => {
 
                 {/* Year Badge */}
                 <div className="flex justify-between items-center mb-10">
-                  <div className="w-16 h-16 rounded-full border flex items-center justify-center text-orange-500 text-xl font-bold">
-                    ⬢
+                  <div className="w-16 h-16 rounded-full border flex items-center justify-center text-primary text-xl font-bold">
+                    <MilitaryTechIcon className="!w-8 !h-8" />
                   </div>
 
                   <span className="bg-gray-100 px-4 py-2 rounded-xl text-sm text-gray-600">

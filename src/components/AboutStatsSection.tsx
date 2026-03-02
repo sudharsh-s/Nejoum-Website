@@ -2,6 +2,35 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import carImg from "@/assets/truck.webp";
 import earthLines from "@/assets/earthline.webp";
+import { useEffect, useState } from "react";
+import { useInView } from "framer-motion";
+
+const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let start = 0;
+    const increment = end / (duration / 16);
+
+    const counter = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setCount(end);
+        clearInterval(counter);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(counter);
+  }, [isInView, end, duration]);
+
+  return <span ref={ref}>{count}</span>;
+};
 
 const AboutStatsSection = () => {
   const sectionRef = useRef(null);
@@ -70,7 +99,8 @@ const AboutStatsSection = () => {
 
               <div className="flex items-center gap-10">
                 <h3 className="text-8xl font-extrabold text-gray-900">
-                  10<span className="text-4xl align-top">+</span>
+                  <Counter end={10} />
+                  <span className="text-4xl align-top">+</span>
                 </h3>
                 <div>
                   <p className="font-semibold text-gray-800">
@@ -84,7 +114,8 @@ const AboutStatsSection = () => {
 
               <div className="flex items-center gap-10">
                 <h3 className="text-8xl font-extrabold text-gray-900">
-                  99<span className="text-4xl align-top">%</span>
+                  <Counter end={99} />
+                  <span className="text-4xl align-top">%</span>
                 </h3>
                 <div>
                   <p className="font-semibold text-gray-800">

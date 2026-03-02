@@ -1,99 +1,129 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+import foooterBg from "@/assets/footer_bg.jpeg";
 
 const Footer = () => {
-  const { t } = useTranslation();
-  const year = new Date().getFullYear();
-
-  const quickLinks = [
-    { to: '/', label: t('nav.home') },
-    { to: '/about', label: t('nav.about') },
-    { to: '/services', label: t('nav.services') },
-    { to: '/how-it-works', label: t('nav.howItWorks') },
-  ];
-
-  const serviceLinks = [
-    t('services.receiving.title'),
-    t('services.storage.title'),
-    t('services.inspection.title'),
-    t('services.container.title'),
-  ];
-
   return (
-    <footer className="gradient-navy text-navy-foreground">
-      <div className="container-enterprise py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <LocalShippingIcon className="text-primary" sx={{ fontSize: 28 }} />
-              <span className="text-lg font-bold">
-                AutoVault<span className="text-primary">Logistics</span>
-              </span>
+    <footer className="relative text-white pt-24 pb-10">
+
+      <img src={foooterBg} alt="" className="absolute top-0 w-full h-full object-cover" />
+
+      <div className="bg-[#011533] w-full h-full absolute top-0 opacity-70"></div>
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* Glass Container */}
+        <div className="bg-[#032d6b] backdrop-blur-2xl rounded-[40px] p-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            {/* Logo Column */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className='flex items-center mb-6'> 
+                  <img src="/logo-icon.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain" /> 
+                  <img src="/logo-name.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain invert brightness-0" /> 
+                </div>
+              </div>
+
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Our dedication lies in embracing challenges and pioneering innovation within the more attractive advertising sector.
+              </p>
+
+              {/* Social Icons */}
+              <div className="flex gap-4">
+                {[FacebookIcon, XIcon, InstagramIcon, LinkedInIcon].map(
+                  (Icon, index) => (
+                    <div
+                      key={index}
+                      className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all duration-300 cursor-pointer"
+                    >
+                      <Icon fontSize="small" />
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-            <p className="text-navy-foreground/70 text-sm leading-relaxed">
-              {t('footer.description')}
-            </p>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-navy-foreground/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-6">
+                Quick Links
+                <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
+              </h4>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.ourServices')}</h4>
-            <ul className="space-y-2">
-              {serviceLinks.map((label) => (
-                <li key={label}>
-                  <Link to="/services" className="text-sm text-navy-foreground/70 hover:text-primary transition-colors">
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <ul className="space-y-3 text-white/60">
+                {["About Us", "Our Services", "Project", "FAQ's", "Our Blog", "Contact Us"].map((item, i) => (
+                  <li key={i} className="hover:text-white transition cursor-pointer">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t('footer.contactInfo')}</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-sm text-navy-foreground/70">
-                <LocationOnIcon sx={{ fontSize: 18, marginTop: '2px' }} className="text-primary shrink-0" />
-                {t('contact.info.address')}
-              </li>
-              <li className="flex items-center gap-2 text-sm text-navy-foreground/70">
-                <PhoneIcon sx={{ fontSize: 18 }} className="text-primary shrink-0" />
-                {t('contact.info.phone')}
-              </li>
-              <li className="flex items-center gap-2 text-sm text-navy-foreground/70">
-                <EmailIcon sx={{ fontSize: 18 }} className="text-primary shrink-0" />
-                {t('contact.info.email')}
-              </li>
-            </ul>
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-semibold mb-6">
+                Our Services
+                <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
+              </h4>
+
+              <ul className="space-y-3 text-white/60">
+                {[
+                  "Ship Freight Shipping",
+                  "Less Than Truckload",
+                  "Container Freight",
+                  "Adult Health",
+                  "Rail Freight Shipping",
+                  "Air Freight Trucking",
+                ].map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Opening Hours */}
+            <div>
+              <h4 className="text-lg font-semibold mb-6">
+                Opening Hours
+                <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
+              </h4>
+
+              <div className="space-y-3 text-white/60 mb-6">
+                <div className="flex justify-between">
+                  <span>Week Days</span>
+                  <span>09.00 - 7.00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Saturday</span>
+                  <span>08.00 - 2.00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Sunday</span>
+                  <span>Day Off</span>
+                </div>
+              </div>
+
+              <button className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
+                Contact Us <ArrowForwardIcon fontSize="small" />
+              </button>
+            </div>
+
           </div>
         </div>
 
-        <div className="border-t border-navy-foreground/10 mt-12 pt-6 text-center text-sm text-navy-foreground/50">
-          © {year} AutoVault Logistics. {t('footer.rights')}
+        {/* Bottom Copyright */}
+        <div className="flex flex-col md:flex-row justify-center items-center mt-10 text-white/60 text-sm">
+          <p>
+            Copyright © 2026{" "}
+            <span className="text-secondary">NEJOUM ALJAZEERA</span> All Rights Reserved.
+          </p>
         </div>
+
       </div>
     </footer>
   );

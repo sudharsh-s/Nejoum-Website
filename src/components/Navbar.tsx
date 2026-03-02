@@ -64,7 +64,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-effect shadow-enterprise' : 'bg-transparent'
+        scrolled ? 'bg-[#032d6b] shadow-enterprise' : 'bg-transparent'
       }`}
     >
       <div className="container-enterprise flex items-center justify-between h-16 md:h-20">
@@ -72,7 +72,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2 group">
           <div className='flex items-center'>
             <img src="/logo-icon.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none" />
-            <img src="/logo-name.png" alt="Nejoum Shipping" className={`h-10 md:h-12 w-auto object-contain ${scrolled ? 'invert' : 'filter-none'}`} />
+            <img src="/logo-name.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none" />
           </div>
         </Link>
 
@@ -91,7 +91,7 @@ const Navbar = () => {
                   <button
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-base font-semibold transition-colors ${
                       scrolled
-                        ? 'text-foreground hover:text-primary'
+                        ? 'text-white hover:text-primary'
                         : 'text-primary-foreground/90'
                     }`}
                   >
@@ -138,7 +138,7 @@ const Navbar = () => {
                   location.pathname === link.to
                     ? 'gradient-primary text-white'
                     : scrolled
-                    ? 'text-foreground hover:text-primary'
+                    ? 'text-white'
                     : 'text-primary-foreground/90'
                 }`}
               >
@@ -155,7 +155,7 @@ const Navbar = () => {
             <button
               onClick={() => setLangOpen(!langOpen)}
               className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                scrolled ? 'text-foreground hover:bg-muted' : 'text-primary-foreground/90 hover:bg-primary-foreground/10'
+                scrolled ? 'text-white hover:bg-muted' : 'text-primary-foreground/90 hover:bg-primary-foreground/10'
               }`}
             >
               <LanguageIcon sx={{ fontSize: 18 }} />

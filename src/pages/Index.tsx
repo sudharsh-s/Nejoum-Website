@@ -12,6 +12,9 @@ import AboutStatsSection from "@/components/AboutStatsSection";
 import AwardsSection from "@/components/AwardsSection";
 import MissionSection from "@/components/MissionSection";
 import ServicesSlider from "@/components/ServicesSlider";
+import BrandSlider from "@/components/BrandSlider";
+import RequestQuote from "@/components/RequestQuote";
+import TestimonialSection from "@/components/TestimonialSection";
 
 
 import heroImg from '@/assets/bg-home.webp';
@@ -35,7 +38,7 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-20 container mx-auto px-6 -mt-40">
+        <div className="relative z-20 container mx-auto px-20 -mt-40">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,7 +91,7 @@ const Index = () => {
         <div className="absolute bottom-6 left-0 w-full overflow-hidden marquee_home_sec">
           <div className="marquee_home">
             <h2 className="text-[120px] md:text-[90px] font-extrabold text-white/50 whitespace-nowrap">
-              NEJOUM AL JAZEERA NEJOUM AL JAZEERA
+              NEJOUM AL JAZEERA NEJOUM AL JAZEERA NEJOUM AL JAZEERA NEJOUM AL JAZEERA
             </h2>
           </div>
         </div>
@@ -104,7 +107,14 @@ const Index = () => {
 
       <ServicesSlider />
 
+      <BrandSlider />
+
       <AwardsSection />
+
+      <RequestQuote />
+
+      <TestimonialSection />
+
 
     </div>
   );

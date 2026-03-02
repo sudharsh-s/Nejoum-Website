@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 
@@ -8,32 +8,38 @@ import serviceSlider2 from "@/assets/services/service-slider-2.jpg";
 import serviceSlider3 from "@/assets/services/service-slider-3.jpg";
 import serviceSlider4 from "@/assets/services/service-slider-4.jpg";
 import serviceSlider5 from "@/assets/services/service-slider-5.jpg";
+import serviceSlider6 from "@/assets/services/service-slider-6.png";
 
 const services = [
   {
-    title: "Cargo shipping",
+    title: "Cargo Shipping",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     img: serviceSlider1,
   },
   {
-    title: "Air freight",
+    title: "Air Freight",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     img: serviceSlider2,
   },
   {
-    title: "Customs brokerage",
+    title: "Customs Brokerage",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     img: serviceSlider3,
   },
   {
-    title: "Warehouse solution",
+    title: "Warehouse Solution",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     img: serviceSlider4,
   },
   {
-    title: "Freight forwarding",
+    title: "Freight Forwarding",
     desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     img: serviceSlider5,
+  },
+  {
+    title: "Towing",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    img: serviceSlider6,
   },
 ];
 
@@ -50,9 +56,14 @@ const ServicesSlider = () => {
 
       <div className="relative z-10 pl-24">
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={70}
           slidesPerView={3}
+          autoplay={{
+            delay: 2500, // 2.5 seconds
+            disableOnInteraction: false,
+          }}
+          loop={true}
           breakpoints={{
             0: { slidesPerView: 1.2 },
             768: { slidesPerView: 2 },

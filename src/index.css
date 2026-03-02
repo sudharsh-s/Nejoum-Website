@@ -78,6 +78,15 @@
     @apply bg-white text-foreground font-sans antialiased;
     height: auto;
   }
+  .title {
+    @apply text-[40px] font-bold tracking-tight;  
+  }
+  .title span {
+    background: #013089;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @layer components {
@@ -134,6 +143,9 @@
     transform: translateY(-4px);
     box-shadow: var(--shadow-xl);
   }
+  .brand-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
 }
 
 /* Home */
@@ -170,3 +182,37 @@
     transform: translateX(-50%);
   }
 }
+
+
+.marquee {
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-item {
+  font-size: 33px;
+  font-weight: 700;
+  margin-right: 30px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.marquee-item:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  transform: scale(1.05);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+

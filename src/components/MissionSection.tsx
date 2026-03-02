@@ -61,8 +61,8 @@ const MissionSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <p className="font-semibold text-lg">Liam Parker</p>
-            <p className="text-sm opacity-70">Founder & CEO, Apexus</p>
+            <p className="font-semibold text-lg">Adel Al Saadi</p>
+            <p className="text-sm opacity-70">CEO, Nejoum Al Jazeera</p>
           </motion.div>
 
         </div>
