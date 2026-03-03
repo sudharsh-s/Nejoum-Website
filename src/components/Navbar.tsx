@@ -43,18 +43,19 @@ const Navbar = () => {
   };
 
   const serviceSubmenu = [
-    { to: "/services/warehouse-storage", label: "Warehouse & Storage" },
-    { to: "/services/road-freight", label: "Road Freight" },
-    { to: "/services/ocean-freight", label: "Ocean Freight" },
-    { to: "/services/air-freight", label: "Air Freight" },
-    { to: "/services/car-wrapping", label: "Car Wrapping" },
-    { to: "/services/inspection-customs", label: "Inspection & Customs Clearance" },
+    { to: "/services/auction-account-services", label: "Auction Account Services" },
+    { to: "/services/towing-services", label: "Towing Services" },
+    { to: "/services/loading-services", label: "Loading Services" },
+    { to: "/services/warehouse-storage-services", label: "Warehouse & Storage Services" },
+    { to: "/services/shipping-services", label: "Shipping Services" },
+    { to: "/services/custom-clearance-services", label: "Custom Clearance Services" },
+    { to: "/services/title-services", label: "Title Services" },
   ];
 
   const navLinks = [
     { to: '/', label: t('nav.home') },
     { to: '/about', label: t('nav.about') },
-    { to: '/services/warehouse-storage', label: t('nav.services') },
+    { to: '/services/auction-account-services', label: t('nav.services') },
     { to: '/contact', label: t('nav.contact') },
   ];
 
@@ -91,7 +92,7 @@ const Navbar = () => {
                   <button
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-base font-semibold transition-colors ${
                       scrolled
-                        ? 'text-white hover:text-primary'
+                        ? 'text-white'
                         : 'text-primary-foreground/90'
                     }`}
                   >
@@ -186,7 +187,7 @@ const Navbar = () => {
           </div>
 
           <Link
-            to="/contact"
+            to="/#quote"
             className="gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover-lift"
           >
             {t('nav.getQuote')}
@@ -293,7 +294,7 @@ const Navbar = () => {
                 ))}
               </div>
               <Link
-                to="/contact"
+                to="/#quote"
                 className="gradient-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold text-center mx-4 mt-2"
               >
                 {t('nav.getQuote')}

@@ -115,7 +115,7 @@ export default function LocationSection() {
         >
 
           <p className="text-md text-primary mb-4 font-medium">● Global Locations</p>
-          <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">Serving You from <br /> 6 Strategic Locations</h2>
+          <h2 className="text-4xl lg:text-[45px] font-bold leading-tight">Serving You from <br /> 6 Strategic Locations</h2>
 
 
         </motion.div>

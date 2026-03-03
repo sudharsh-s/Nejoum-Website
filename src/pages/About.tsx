@@ -4,6 +4,7 @@ import AboutSection from '@/components/AboutSection';
 import RunningText from '@/components/RunningText';
 import LocationSection from '@/components/LocationSection';
 import FaqSection from '@/components/FaqSection';
+import AwardsSection from "@/components/AwardsSection";
 
 
 const About = () => {
@@ -18,7 +19,9 @@ const About = () => {
 
       <RunningText />
 
-      <LocationSection />
+      <AwardsSection />
+
+      {/* <LocationSection /> */}
 
       <FaqSection />
 

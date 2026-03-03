@@ -7,7 +7,7 @@ import Language from "@mui/icons-material/Language";
 import img1 from "@/assets/about/about_sec-bg-1.png";
 import img2 from "@/assets/about/about_sec-bg-2.png";
 import img3 from "@/assets/about/about_sec-bg-3.png";
-
+import ceo from "@/assets/about/Adel-Al-Saadi.webp";
 
 // 🔥 Counter Component
 const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
@@ -50,12 +50,15 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="max-w-7xl mb-16"
+          className="max-w-7xl mb-14"
         >
-          <div className="grid lg:grid-cols-2">
-            <p className="text-md text-primary mb-4 font-medium">
-              ● About Us
-            </p>
+          <div className="grid lg:grid-cols-2 items-center">
+            <div>
+              <p className="text-md text-primary mb-8 font-medium">
+                ● About Us
+              </p>
+              <img src={ceo} className="w-[80%] mb-6" />
+            </div>
 
             <div className="-ml-18">
 
@@ -82,7 +85,7 @@ const AboutSection = () => {
 
             <div className="absolute bottom-6 left-6 text-white">
               <h3 className="text-8xl font-bold">
-                <Counter end={10} />+
+                <Counter end={23} />+
               </h3>
               <p className="text-sm mt-2">Years of Experience</p>
             </div>
@@ -95,7 +98,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 flex items-center justify-center text-white text-center">
               <div>
                 <h3 className="text-8xl font-bold">
-                  <Counter end={154} />+
+                  <Counter end={57} />+
                 </h3>
                 <p className="text-sm mt-2">Countries Covered</p>
               </div>
@@ -108,7 +111,7 @@ const AboutSection = () => {
 
             <div className="absolute top-6 right-6 text-white text-right">
               <h3 className="text-8xl font-bold">
-                <Counter end={2606} />
+                <Counter end={1} />M+
               </h3>
               <p className="text-sm mt-2">Delivered Packages</p>
             </div>

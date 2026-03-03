@@ -9,7 +9,6 @@ import PublicIcon from "@mui/icons-material/Public";
 
 import StatsSection from "@/components/StatsSection";
 import AboutStatsSection from "@/components/AboutStatsSection";
-import AwardsSection from "@/components/AwardsSection";
 import MissionSection from "@/components/MissionSection";
 import ServicesSlider from "@/components/ServicesSlider";
 import BrandSlider from "@/components/BrandSlider";
@@ -108,8 +107,6 @@ const Index = () => {
       <ServicesSlider />
 
       <BrandSlider />
-
-      <AwardsSection />
 
       <RequestQuote />
 

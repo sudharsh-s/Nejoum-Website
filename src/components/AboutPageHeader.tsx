@@ -8,20 +8,20 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 import bg1 from "@/assets/about/about-header-bg-1.jpg";
 import bg2 from "@/assets/about/about-header-bg-2.webp";
-import person from "@/assets/about/about-header-person.webp";
+// import person from "@/assets/about/about-header-person.png";
 
 const slides = [
   {
     title: "World-Class\nLogistics",
     desc: "Strategically positioned near major international ports, delivering efficient global trade solutions",
     bg: bg1,
-    person: person,
+    // person: person,
   },
   {
     title: "Smart Supply\nChain Solutions",
     desc: "Optimized routes and advanced technology powering seamless logistics worldwide",
     bg: bg2,
-    person: person,
+    // person: person,
   },
 ];
 
@@ -75,7 +75,7 @@ const AboutPageHeader = () => {
                 </motion.div>
 
                 {/* RIGHT PERSON IMAGE */}
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.2 }}
@@ -85,7 +85,7 @@ const AboutPageHeader = () => {
                     src={slide.person}
                     className="h-[90%] object-contain"
                   />
-                </motion.div>
+                </motion.div> */}
 
               </div>
 
