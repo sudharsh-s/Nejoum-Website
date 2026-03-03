@@ -34,21 +34,21 @@ export default function ServiceDetail() {
   const slides = [
     {
       type: "video",
-      src: "/src/assets/services/service-video.mp4",
+      src: "/service-video.mp4",
       title: "Seamless Shipping Across Land, Sea & Sky",
       subtitle:
         "Secure, scalable, and technology-driven warehouse solutions for global logistics.",
     },
     {
       type: "video",
-      src: "/src/assets/services/service-video.mp4",
+      src: "/service-video.mp4",
       title: "Reliable Transport & Logistics Services",
       subtitle:
         "Professional service with proven results.",
     },
     {
       type: "video",
-      src: "/src/assets/services/service-video.mp4",
+      src: "/service-video.mp4",
       title: "Solutions That Drive Results",
       subtitle:
         "Smart solutions for modern businesses.",
