@@ -68,10 +68,10 @@ const AboutPageHeader = () => {
                     {slide.desc}
                   </p>
 
-                  <button className="mt-8 bg-white text-black px-6 py-4 rounded-md flex items-center gap-3 font-medium hover:bg-gray-200 transition">
+                  <a href="/services/auction-account-services" className="mt-8 bg-white text-black px-6 py-4 rounded-md inline-flex items-center gap-3 font-medium hover:bg-gray-200 transition">
                     Explore Our Services
                     <ArrowOutwardIcon />
-                  </button>
+                  </a>
                 </motion.div>
 
                 {/* RIGHT PERSON IMAGE */}

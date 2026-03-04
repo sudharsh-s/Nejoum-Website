@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import foooterBg from "@/assets/footer_bg.jpeg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -36,16 +37,34 @@ const Footer = () => {
 
               {/* Social Icons */}
               <div className="flex gap-4">
-                {[FacebookIcon, XIcon, InstagramIcon, LinkedInIcon].map(
-                  (Icon, index) => (
-                    <div
-                      key={index}
-                      className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all duration-300 cursor-pointer"
-                    >
-                      <Icon fontSize="small" />
-                    </div>
-                  )
-                )}
+                {[
+                  {
+                    Icon: FacebookIcon,
+                    link: "https://www.facebook.com/nejoumaljazeera",
+                  },
+                  {
+                    Icon: InstagramIcon,
+                    link: "https://www.instagram.com/nejoumaljazeera",
+                  },
+                  {
+                    Icon: XIcon,
+                    link: "https://x.com/Nejoumae",
+                  },
+                  {
+                    Icon: LinkedInIcon,
+                    link: "https://www.linkedin.com/company/nejoum-aljazeer/",
+                  },
+                ].map(({ Icon, link }, index) => (
+                  <a
+                    key={index}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-all duration-300 cursor-pointer"
+                  >
+                    <Icon fontSize="small" />
+                  </a>
+                ))}
               </div>
             </div>
 
@@ -57,9 +76,19 @@ const Footer = () => {
               </h4>
 
               <ul className="space-y-3 text-white/60">
-                {["About Us", "Our Services", "Project", "FAQ's", "Our Blog", "Contact Us"].map((item, i) => (
-                  <li key={i} className="hover:text-white transition cursor-pointer">
-                    {item}
+                {[
+                  { label: "Home", path: "/" },
+                  { label: "About Us", path: "/about" },
+                  { label: "Our Services", path: "/services/auction-account-services" },
+                  { label: "Contact Us", path: "/contact" },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      to={item.path}
+                      className="hover:text-white transition"
+                    >
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -74,18 +103,26 @@ const Footer = () => {
 
               <ul className="space-y-3 text-white/60">
                 {[
-                  "Ship Freight Shipping",
-                  "Less Than Truckload",
-                  "Container Freight",
-                  "Adult Health",
-                  "Rail Freight Shipping",
-                  "Air Freight Trucking",
-                ].map((item, i) => (
-                  <li key={i}>{item}</li>
+                  { label: "Auction Account Services", path: "/services/auction-account-services" },
+                  { label: "Towing Services", path: "/services/towing-services" },
+                  { label: "Loading Services", path: "/services/loading-services" },
+                  { label: "Warehouse Storage Services", path: "/services/warehouse-storage-services" },
+                  { label: "Shipping Services", path: "/services/shipping-services" },
+                  { label: "Custom Clearance Services", path: "/services/custom-clearance-services" },
+                  { label: "Title Services", path: "/services/title-services" },
+                ].map((service, i) => (
+                  <li key={i}>
+                    <a
+                      href={service.path}
+                      className="hover:text-white transition"
+                      rel="noopener noreferrer"
+                    >
+                      {service.label}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
-
             {/* Opening Hours */}
             <div>
               <h4 className="text-lg font-semibold mb-6">
@@ -108,9 +145,9 @@ const Footer = () => {
                 </div>
               </div>
 
-              <button className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
+              <a href="/contact" className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
                 Contact Us <ArrowForwardIcon fontSize="small" />
-              </button>
+              </a>
             </div>
 
           </div>

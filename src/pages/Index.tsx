@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import BoltIcon from "@mui/icons-material/Bolt";
 import PublicIcon from "@mui/icons-material/Public";
 
-
 import StatsSection from "@/components/StatsSection";
 import AboutStatsSection from "@/components/AboutStatsSection";
 import MissionSection from "@/components/MissionSection";
@@ -15,10 +14,36 @@ import BrandSlider from "@/components/BrandSlider";
 import RequestQuote from "@/components/RequestQuote";
 import TestimonialSection from "@/components/TestimonialSection";
 
-
 import heroImg from '@/assets/bg-home.webp';
 
+import { useState, useEffect } from "react";
+
 const Index = () => {
+
+  const slides = [
+    {
+      type: "image",
+      src: heroImg,
+    },
+    {
+      type: "video",
+      src: "home_banner.mp4", 
+    },
+    {
+      type: "video",
+      src: "home_banner_2.mp4", 
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -26,14 +51,41 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0b1f2a]">
   
         {/* Background Image Right Side */}
-        <div className="absolute inset-0 flex">
-          <div className="hidden lg:block w-full relative">
-            <img
-              src={heroImg}
-              alt="Logistics"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+        <div className="absolute inset-0">
+
+          {slides.map((slide, index) => (
+            <motion.div
+              key={index}
+              initial={false}
+              animate={{ opacity: index === current ? 1 : 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0"
+            >
+              {slide.type === "image" ? (
+                <img
+                  src={slide.src}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="relative w-full h-full">
+                  {/* Video */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src={slide.src} type="video/mp4" />
+                  </video>
+
+                  {/* 🔥 Video Dark Overlay Only */}
+                  <div className="absolute inset-0 bg-black/50"></div>
+                </div>
+              )}
+            </motion.div>
+          ))}
+
         </div>
 
         {/* Content */}

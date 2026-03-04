@@ -4,8 +4,19 @@ import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Check } from "lucide-react";
 import ServiceAccordion from "@/components/ServiceAccordion";
 import ServiceSidebar from "@/components/ServiceSidebar";
+
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from "react";
+
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+
+// Icons
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import AnchorOutlinedIcon from "@mui/icons-material/AnchorOutlined";
+import DirectionsCarOutlinedIcon from "@mui/icons-material/DirectionsCarOutlined";
+import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -30,6 +41,15 @@ export default function ServiceDetail() {
       });
     }
   }, [slug]);
+
+  const iconMap: any = {
+    inventory: <Inventory2OutlinedIcon />,
+    anchor: <AnchorOutlinedIcon />,
+    car: <DirectionsCarOutlinedIcon />,
+    security: <SecurityOutlinedIcon />,
+    cube: <ViewInArOutlinedIcon />,
+    crown: <WorkspacePremiumOutlinedIcon />,
+  };
 
   const slides = [
     {
@@ -70,7 +90,7 @@ export default function ServiceDetail() {
     <>
 
       {/* Hero Section with Background Video */}
-      <section className="relative h-[30vh] md:h-[50vh] lg:h-[80vh] flex items-center overflow-hidden">
+      <section className="relative h-[30vh] md:h-[50vh] lg:h-[80vh] flex items-center">
 
         {/* Slides */}
         {slides.map((slide, index) => (
@@ -138,7 +158,7 @@ export default function ServiceDetail() {
                 to="/about"
                 className="border border-white/40 bg-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/10 transition"
               >
-                Reach Out
+                Learn More
               </Link>
 
             </div>
@@ -165,12 +185,14 @@ export default function ServiceDetail() {
       {/* SERVICE DETAIL CONTENT */}
       <section className="pt-20 pb-20 bg-white" ref={contentRef}>
 
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10 items-start">
 
           {/* RIGHT GALLERY */}
-          <div className="space-y-4">
+          <div className="lg:col-span-1 h-full relative">
 
-            <ServiceSidebar />
+            <div className="sticky top-24">
+              <ServiceSidebar />
+            </div>
 
           </div>
 
@@ -183,59 +205,106 @@ export default function ServiceDetail() {
             </h2>
 
             {/* TEXT */}
-            <p className="text-gray-500 text-base leading-6 mb-6">
-              {service.introText}
-            </p>
+            <p
+              className="text-gray-500 text-base leading-6 mb-6"
+              dangerouslySetInnerHTML={{ __html: service.introText }}
+            />
 
-            <p className="text-gray-500 text-base leading-6 mb-6">
-              {service.introText1}
-            </p>
+            <p
+              className="text-gray-500 text-base leading-6 mb-6"
+              dangerouslySetInnerHTML={{ __html: service.introText1 }}
+            />
 
-            <div className="grid lg:grid-cols-2 mt-10 gap-7">
-              <div>
-                {/* FEATURES */}
-                <h3 className="text-xl text-gray-600 font-bold mb-4">
-                  Key Benefits
-                </h3>
-
-                <ul className="space-y-5 mb-8">
-                  {service.features.map((item, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
-
-                      {typeof item === "string" ? (
-                        <span>{item}</span>
-                      ) : (
-                        <span>
-                          <span className="font-semibold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-base leading-6">{item.description}</span>
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+            {service.gallery && (
+              <div className="grid md:grid-cols-2 gap-6 mt-7">
+                {service.gallery.map((img, i) => (
+                  <motion.img
+                    key={i}
+                    src={img}
+                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                  />
+                ))}
               </div>
-              <div>
-                {/* FEATURES */}
-                <h3 className="text-xl text-gray-600 font-bold mb-4">
-                  What’s Included
-                </h3>
+            )}
 
-                <ul className="space-y-5 mb-8">
-                  {service.features.map((item, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
-
-                      {typeof item === "string" ? (
-                        <span>{item}</span>
-                      ) : (
-                        <span>
-                          <span className="font-semibold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-base leading-6">{item.description}</span>
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+            <div className="mt-7 mb-10">
+              <h3 className="text-xl text-gray-600 font-bold mb-6">
+                Key Benefits
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        
+                {service.benefits?.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-[#f5f7fa] rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+                  >
+                    <div className="flex items-center gap-5 mb-2">
+                      {/* Icon */}
+                      <div
+                        className={`w-14 h-14 rounded-xl flex items-center justify-center mb-3 ${item.bg} ${item.color}`}
+                      >
+                        {iconMap[item.icon]}
+                      </div>
+        
+                      {/* Title */}
+                      <h3 className="text-base font-semibold text-gray-800 mb-3">
+                        {item.title}
+                      </h3>
+                    </div>
+        
+                    {/* Description */}
+                    <p className="text-gray-500 leading-relaxed text-base">
+                      {item.desc}
+                    </p>
+        
+                  </motion.div>
+                ))}
+        
               </div>
+            </div>
+
+            <div className="mt-10">
+              {/* FEATURES */}
+              <h3 className="text-xl text-gray-600 font-bold mb-4">
+                What's Included
+              </h3>
+
+              <ul className="space-y-5 mb-8">
+                {service.features.map((item, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <TaskAltIcon className="!w-5 !h-5 text-primary mt-1 shrink-0" />
+
+                    {typeof item === "string" ? (
+                      <span>{item}</span>
+                    ) : (
+                      <span>
+                        <span className="font-semibold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-base leading-6">{item.description}</span>
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              {/* FEATURES */}
+              <h3 className="text-xl text-gray-600 font-bold mb-4">
+                {service.highlightsTitle}
+              </h3>
+
+              <ul className="space-y-4 mb-8">
+                {service.highlights.map((item, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
+
+                    <span className="text-gray-500 text-base leading-6"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* HIGHLIGHTS */}
@@ -253,6 +322,9 @@ export default function ServiceDetail() {
             </ul> */}
 
             <div className="mt-10">
+              <h3 className="text-xl text-gray-600 font-bold mb-4">
+                Frequently Asked Questions (FAQ)
+              </h3>
               <ServiceAccordion items={service.accordion} />
             </div>
           </div>

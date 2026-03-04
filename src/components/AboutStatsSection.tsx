@@ -90,16 +90,16 @@ const AboutStatsSection = () => {
               solutions that keep your supply chain running smoothly.
             </p>
 
-            <button className="gradient-primary text-white px-6 py-3 rounded-lg font-semibold transition">
+            <a href="/about" className="gradient-primary text-white px-6 py-3 rounded-lg font-semibold transition">
               Learn More
-            </button>
+            </a>
 
             {/* Stats */}
             <div className="mt-16 space-y-12">
 
               <div className="flex items-center gap-10">
                 <h3 className="text-8xl font-extrabold text-gray-900">
-                  <Counter end={10} />
+                  <Counter end={23} />
                   <span className="text-4xl align-top">+</span>
                 </h3>
                 <div>
