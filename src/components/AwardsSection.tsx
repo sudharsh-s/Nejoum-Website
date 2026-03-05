@@ -51,35 +51,35 @@ const AwardsSection = () => {
       <div className="container mx-auto px-6">
 
         {/* Header */}
-        <div className="flex justify-center items-end mb-14">
+        <div className="flex justify-between items-end mb-14">
           <div>
             {/* <p className="text-md text-primary mb-4 font-medium">
               ● Awards & Recognition
             </p> */}
             <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">
-              Our Vehicle Care & Transport Process
+              Our Vehicle Care & <br />Transport Process
             </h2>
           </div>
 
           {/* Custom Nav Buttons */}
-          {/* <div className="hidden md:flex">
-            <div className="swiper-button-prev !static cursor-pointer">
-              <ArrowBackIosNewIcon className="text-black !w-7 !h-7" />
+          <div className="hidden md:flex">
+            <div className="swiper-button-prev !static cursor-pointer bg-primary rounded-full p-2 mr-3">
+              <ArrowBackIosNewIcon className="text-white !w-5 !h-5" />
             </div>
-            <div className="swiper-button-next !static cursor-pointer">
-              <ArrowForwardIosIcon className="text-black !w-7 !h-7" />
+            <div className="swiper-button-next !static cursor-pointer bg-primary rounded-full p-2">
+              <ArrowForwardIosIcon className="text-white !w-5 !h-5" />
             </div>
-          </div> */}
+          </div>
         </div>
 
         {/* Swiper Slider */}
         <Swiper
-          modules={[Navigation, Autoplay]}
-          loop={true}
-          speed={3000}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
+          modules={[Navigation]}
+          speed={600}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            disabledClass: "swiper-button-disabled",
           }}
           spaceBetween={30}
           slidesPerView={3}

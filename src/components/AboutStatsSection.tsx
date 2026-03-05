@@ -114,7 +114,7 @@ const AboutStatsSection = () => {
 
               <div className="flex items-center gap-10">
                 <h3 className="text-8xl font-extrabold text-gray-900">
-                  <Counter end={10} />K
+                  <Counter end={1} />M
                   <span className="text-4xl align-top">+</span>
                 </h3>
                 <div>
