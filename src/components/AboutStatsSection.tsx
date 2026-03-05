@@ -4,6 +4,7 @@ import carImg from "@/assets/truck.webp";
 import earthLines from "@/assets/earthline.webp";
 import { useEffect, useState } from "react";
 import { useInView } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -89,9 +90,9 @@ const AboutStatsSection = () => {
               Our team handles every step with precision so our clients can focus on <b>buying and selling vehicles while we manage the logistics.</b>
             </p>
 
-            <a href="/about" className="gradient-primary text-white px-6 py-4 rounded-lg font-semibold transition">
+            <Link to="/about" className="gradient-primary text-white px-6 py-4 rounded-lg font-semibold transition">
               Learn More
-            </a>
+            </Link>
 
             {/* Stats */}
             <div className="mt-16 space-y-12">

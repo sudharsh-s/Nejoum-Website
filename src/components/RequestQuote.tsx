@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import worldMap from "@/assets/world-map.png";
 import containers from "@/assets/request-containers.png";
+import { Link } from 'react-router-dom';
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
@@ -56,9 +57,9 @@ const RequestQuote = () => {
             ))}
           </ul>
 
-          <a href="/contact" className="mt-8 bg-secondary hover:bg-yellow-500 px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition">
+          <Link to="/contact" className="mt-8 bg-secondary hover:bg-yellow-500 px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition">
             Contact Us <ArrowOutwardIcon fontSize="small" />
-          </a>
+          </Link>
         </motion.div>
 
         {/* RIGHT FORM CARD */}
