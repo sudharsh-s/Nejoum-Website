@@ -19,52 +19,94 @@ export default function ContactSection() {
           {/* LEFT SIDE */}
           <div>
 
-            <p className="flex items-center gap-3 text-sm text-white/70 mb-6">
+            {/* <p className="flex items-center gap-3 text-sm text-white/70 mb-6">
               <span className="w-3 h-3 bg-primary rounded-sm"></span>
               Contact Us
-            </p>
+            </p> */}
 
             <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-16">
-              Count On Us <br /> For Answers
+              Contact Us
             </h2>
 
             {/* Contact Info */}
-            <div className="flex gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
-              {/* Email */}
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
-                  <MailOutlineIcon />
-                </div>
-                <div>
-                  <p className="text-white/50 text-sm">E-mail Address</p>
-                  <p className="font-semibold text-white/90">info@naj.ae</p>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
-                  <CallOutlinedIcon />
-                </div>
-                <div>
-                  <p className="text-white/50 text-sm">Phone Number</p>
-                  <p className="font-semibold text-white/90">+971 600 565 686</p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Location */}
-            <div className="flex items-center gap-5 mt-7">
-              <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
-                <LocationPinIcon />
-              </div>
               <div>
-                <p className="text-white/50 text-sm">Our Location</p>
-                <p className="font-semibold text-white/90">NEJOUM ALJAZEERA Group Industrial area 4, Sharjah, UAE.</p>
+                <h4 className="text-xl font-bold mb-4">UAE</h4>
+                {/* Email */}
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <MailOutlineIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">E-mail Address</p>
+                    <p className="font-semibold text-white/90">info@naj.ae</p>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-center gap-5 mt-7">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <CallOutlinedIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">Phone Number</p>
+                    <p className="font-semibold text-white/90">+971 600 565 686</p>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center gap-5 mt-7">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <LocationPinIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">Our Location</p>
+                    <p className="font-semibold text-white/90">Sharjah, UAE.</p>
+                  </div>
+                </div>
+
               </div>
+
+              <div>
+                <h4 className="text-xl font-bold mb-4">OMAN</h4>
+                {/* Email */}
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <MailOutlineIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">E-mail Address</p>
+                    <p className="font-semibold text-white/90">cs.oman@naj.ae</p>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-center gap-5 mt-7">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <CallOutlinedIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">Phone Number</p>
+                    <p className="font-semibold text-white/90">0096894744020</p>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center gap-5 mt-7">
+                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center">
+                    <LocationPinIcon />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-sm">Our Location</p>
+                    <p className="font-semibold text-white/90">Seeb, Oman.</p>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
+
 
           </div>
 

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
 import VerifiedUser from "@mui/icons-material/VerifiedUser";
 import Language from "@mui/icons-material/Language";
+import IAAMarketAlliance from "@/components/IAAMarketAlliance";
 
 import img1 from "@/assets/about/about_sec-bg-1.png";
 import img2 from "@/assets/about/about_sec-bg-2.png";
@@ -52,28 +53,33 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="max-w-7xl mb-14"
         >
-          <div className="grid lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-md text-primary mb-8 font-medium">
+          <div className="flex items-start gap-10">
+            <div className="w-[45%]">
+              {/* <p className="text-md text-primary mb-8 font-medium">
                 ● About Us
-              </p>
-              <img src={ceo} className="w-[80%] mb-6" />
+              </p> */}
+              <img src={ceo} className="w-[100%] mb-6" />
             </div>
 
-            <div className="-ml-18">
+            <div className="w-[55%]">
 
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                At Nejoum, we move the world with smart and seamless logistics.
+              <h2 className="text-4xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-6">
+                Trusted by the World’s Leading Companies for Over 23 Years
               </h2>
 
               <p className="text-gray-600 leading-relaxed">
-                With over 10 years of industry experience, we provide trusted freight solutions
-                by rail, road, ocean, and air. Our mission is to simplify global transport
-                through technology, reliability, and personalized support.
+                We have been at the forefront of the global automotive auction and logistics industry. Our journey began with a clear mission — to bring <b>transparency, efficiency, and trust</b> into vehicle trading and logistics.
               </p>
+              <p className="text-gray-600 leading-relaxed mt-3">
+                Today, we proudly stand among the <b>largest and most trusted automotive service providers across the Middle East and global markets</b>, connecting buyers, sellers, dealers, and logistics partners through a powerful ecosystem built on reliability and innovation.
+              </p>
+
+              <h5 className="text-lg font-bold text-gray-900 mt-4">Adel Al Saadi, CEO</h5>
             </div>
           </div>
         </motion.div>
+
+        <IAAMarketAlliance />
 
         {/* IMAGE GRID */}
         <div className="grid md:grid-cols-3 gap-6 relative">
@@ -85,9 +91,9 @@ const AboutSection = () => {
 
             <div className="absolute bottom-6 left-6 text-white">
               <h3 className="text-8xl font-bold">
-                <Counter end={23} />+
+                <Counter end={22} />+
               </h3>
-              <p className="text-sm mt-2">Years of Experience</p>
+              <p className="text-sm mt-2">Branches</p>
             </div>
           </div>
 
@@ -111,7 +117,7 @@ const AboutSection = () => {
 
             <div className="absolute top-6 right-6 text-white text-right">
               <h3 className="text-8xl font-bold">
-                <Counter end={1} />M+
+                <Counter end={500} />k+
               </h3>
               <p className="text-sm mt-2">Delivered Packages</p>
             </div>
@@ -155,7 +161,7 @@ function Feature({ icon: Icon, title, desc }) {
         <Icon fontSize="large" />
       </div>
 
-      <div className="font-semibold mb-2">
+      <div className="font-semibold text-xl mb-2">
         {title}
       </div>
 

@@ -16,6 +16,7 @@ import HowItWorks from "./pages/HowItWorks";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
+import ScrollToHash from "./components/ScrollToHash";
 
 const queryClient = new QueryClient();
 
@@ -63,10 +64,18 @@ const ScrollManager = () => {
         const element = document.getElementById(id);
 
         if (element) {
-          element.scrollIntoView({
+          const navbarOffset = 90;
+
+          const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+
+          const offsetPosition = elementPosition - navbarOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
             behavior: "smooth",
-            block: "start",
           });
+
           clearInterval(interval);
         }
 

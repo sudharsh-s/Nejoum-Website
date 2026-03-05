@@ -45,13 +45,13 @@ const MissionSection = () => {
           </motion.p>
 
           <motion.h2
-            className="text-white text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight max-w-5xl"
+            className="text-white text-4xl md:text-6xl lg:text-6xl font-semibold leading-tight max-w-5xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, delay: 0.5 }}
           >
-            “From day one, our mission was simple: turn complex supply chains into repeatable wins.”
+            “From day one, our mission was simple: make buying, moving, and exporting vehicles across borders fast, transparent, and reliable.”
           </motion.h2>
 
           <motion.div

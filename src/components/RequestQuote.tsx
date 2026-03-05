@@ -37,10 +37,10 @@ const RequestQuote = () => {
 
           <ul className="space-y-4 text-white/80">
             {[
-              "Make long term business decisions",
-              "Transparent career journey and support.",
-              "Be a responsible member of the community",
-              "Provide a service we are proud of",
+              "Trusted by global vehicle buyers and exporters",
+              "Reliable logistics network across ports and auctions",
+              "Transparent handling and shipment tracking",
+              "Dedicated support from booking to delivery",
             ].map((item, index) => (
               <motion.li
                 key={index}

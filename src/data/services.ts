@@ -1,5 +1,5 @@
 import auction1 from "@/assets/services/auction-1.png";
-import auction2 from "@/assets/services/auction-2.webp";
+import auction2 from "@/assets/services/auction-2.jpeg";
 import towing1 from "@/assets/services/towing-1.jpg";
 import towing2 from "@/assets/services/towing-2.jpg";
 import loading1 from "@/assets/services/loading-1.jpeg";

@@ -60,7 +60,7 @@ const AboutStatsSection = () => {
           {/* LEFT - Scroll Moving Truck */}
           <div>
             <p className="text-md text-primary mb-4 font-medium">
-              ● About Us
+              ● About Us – Nejoum Logistics
             </p>
             <motion.div style={{ x }} className="relative">
 
@@ -82,15 +82,14 @@ const AboutStatsSection = () => {
           >
 
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              At Nejoum, we believe logistics should be the easiest part of your business
+              At Nejoum, we believe vehicle logistics should be the easiest part of your automotive business
             </h2>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              With years of experience in third-party logistics, we provide end-to-end
-              solutions that keep your supply chain running smoothly.
+              Our team handles every step with precision so our clients can focus on <b>buying and selling vehicles while we manage the logistics.</b>
             </p>
 
-            <a href="/about" className="gradient-primary text-white px-6 py-3 rounded-lg font-semibold transition">
+            <a href="/about" className="gradient-primary text-white px-6 py-4 rounded-lg font-semibold transition">
               Learn More
             </a>
 
@@ -114,15 +113,15 @@ const AboutStatsSection = () => {
 
               <div className="flex items-center gap-10">
                 <h3 className="text-8xl font-extrabold text-gray-900">
-                  <Counter end={99} />
-                  <span className="text-4xl align-top">%</span>
+                  <Counter end={10} />K
+                  <span className="text-4xl align-top">+</span>
                 </h3>
                 <div>
                   <p className="font-semibold text-gray-800">
-                    On-Time order fulfillment rate
+                    Vehicles Handled
                   </p>
                   <p className="text-gray-500 text-sm">
-                    We ensure every order leaves our warehouse on schedule
+                    Successfully transported, loaded, and shipped to global destinations every year.
                   </p>
                 </div>
               </div>

@@ -13,6 +13,7 @@ import ServicesSlider from "@/components/ServicesSlider";
 import BrandSlider from "@/components/BrandSlider";
 import RequestQuote from "@/components/RequestQuote";
 import TestimonialSection from "@/components/TestimonialSection";
+import AwardsSection from "@/components/AwardsSection";
 
 import heroImg from '@/assets/bg-home.webp';
 
@@ -40,7 +41,7 @@ const Index = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -159,6 +160,8 @@ const Index = () => {
       <ServicesSlider />
 
       <BrandSlider />
+
+      <AwardsSection />
 
       <RequestQuote />
 

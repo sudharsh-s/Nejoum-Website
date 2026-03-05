@@ -11,7 +11,7 @@ const stats = [
     icon: Language,
     value: 300,
     suffix: "k+",
-    label: "Global Shipping & Auction Partners",
+    label: "Container Delivered ",
   },
   {
     icon: WorkspacePremiumIcon,
@@ -21,9 +21,9 @@ const stats = [
   },
   {
     icon: LocalShipping,
-    value: 1500,
+    value: 1000,
     suffix: "k+",
-    label: "Vehicles Processed Annually",
+    label: "Car Delivered",
   },
 ];
 
