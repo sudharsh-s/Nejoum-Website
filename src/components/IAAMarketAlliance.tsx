@@ -31,8 +31,7 @@ export default function IAAMarketAlliance() {
           </p>
 
           {/* Button */}
-          <Link
-            to="/contact"
+          <a href="https://help.iaai.com/s/broker-info?language=en_US&varAccountId=0013g000007PwUcAAK" target="_blank" rel="noopener noreferrer"
             className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inlineflex items-center gap-2"
           >
             Read More
@@ -44,7 +43,7 @@ export default function IAAMarketAlliance() {
             >
               <EastIcon />
             </motion.span>
-          </Link>
+          </a>
         </motion.div>
 
         {/* RIGHT LOGOS */}

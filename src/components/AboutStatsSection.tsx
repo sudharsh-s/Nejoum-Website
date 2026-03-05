@@ -42,7 +42,7 @@ const AboutStatsSection = () => {
   });
 
   // Move truck from -300px to +200px while scrolling
-  const x = useTransform(scrollYProgress, [0, 1], [-700, 100]);
+  const x = useTransform(scrollYProgress, [0, 1], [-800, 50]);
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden pt-10 pb-28">
@@ -55,7 +55,7 @@ const AboutStatsSection = () => {
       />
 
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-14 items-start">
 
           {/* LEFT - Scroll Moving Truck */}
           <div>
@@ -81,7 +81,7 @@ const AboutStatsSection = () => {
             viewport={{ once: true }}
           >
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-4xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-6">
               At Nejoum, we believe vehicle logistics should be the easiest part of your automotive business
             </h2>
 

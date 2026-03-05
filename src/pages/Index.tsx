@@ -130,7 +130,7 @@ const Index = () => {
               </Link>
 
               <Link
-                to="/services"
+                to="/services/auction-account-services"
                 className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
               >
                 Explore Services
