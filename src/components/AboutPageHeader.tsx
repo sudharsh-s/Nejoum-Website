@@ -48,7 +48,7 @@ const AboutPageHeader = () => {
               />
 
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
 
               {/* Content Container */}
               <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
