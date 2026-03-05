@@ -7,7 +7,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const RequestQuote = () => {
   return (
-    <section id="quote" className="relative py-24 bg-[#0b3574] text-white scroll-mt-28">
+    <section className="relative py-24 bg-[#0b3574] text-white scroll-mt-28">
 
       {/* Background Map */}
       <div

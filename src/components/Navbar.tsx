@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LanguageIcon from '@mui/icons-material/Language';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import QuoteModal from "@/components/QuoteModal";
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -16,6 +17,8 @@ const languages = [
 ];
 
 const Navbar = () => {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -186,12 +189,12 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <Link
-            to="/#quote"
+          <button
+            onClick={() => setQuoteOpen(true)}
             className="gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover-lift"
           >
             {t('nav.getQuote')}
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -293,17 +296,24 @@ const Navbar = () => {
                   </button>
                 ))}
               </div>
-              <Link
-                to="/#quote"
-                className="gradient-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold text-center mx-4 mt-2"
+              <button
+                onClick={() => setQuoteOpen(true)}
+                className="gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover-lift"
               >
                 {t('nav.getQuote')}
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <QuoteModal
+        open={quoteOpen}
+        onClose={() => setQuoteOpen(false)}
+      />
+      
     </motion.nav>
+    
   );
 };
 

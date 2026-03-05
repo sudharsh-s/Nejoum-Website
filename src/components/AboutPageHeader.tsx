@@ -3,6 +3,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { Link } from 'react-router-dom';
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
@@ -68,10 +69,10 @@ const AboutPageHeader = () => {
                     {slide.desc}
                   </p>
 
-                  <a href="/services/auction-account-services" className="mt-8 bg-white text-black px-6 py-4 rounded-md inline-flex items-center gap-3 font-medium hover:bg-gray-200 transition">
+                  <Link to="/services/auction-account-services" className="mt-8 bg-white text-black px-6 py-4 rounded-md inline-flex items-center gap-3 font-medium hover:bg-gray-200 transition">
                     Explore Our Services
                     <ArrowOutwardIcon />
-                  </a>
+                  </Link>
                 </motion.div>
 
                 {/* RIGHT PERSON IMAGE */}

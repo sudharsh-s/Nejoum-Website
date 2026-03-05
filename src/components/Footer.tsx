@@ -145,9 +145,9 @@ const Footer = () => {
                 </div>
               </div>
 
-              <a href="/contact" className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
+              <Link to="/contact" className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
                 Contact Us <ArrowForwardIcon fontSize="small" />
-              </a>
+              </Link>
             </div>
 
           </div>

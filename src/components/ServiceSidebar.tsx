@@ -73,10 +73,10 @@ export default function ServiceSidebar() {
           </div>
 
           <div className="flex justify-center mt-2">
-            <a href="/contact" className="bg-white text-black px-5 py-3 rounded-md flex items-center gap-3 font-medium hover:bg-gray-200 transition">
+            <Link to="/contact" className="bg-white text-black px-5 py-3 rounded-md flex items-center gap-3 font-medium hover:bg-gray-200 transition">
               Get a Quote
               <ArrowOutwardIcon />
-            </a>
+            </Link>
           </div>
 
         </div>
