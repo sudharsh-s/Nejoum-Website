@@ -47,7 +47,41 @@ const locations = [
     lng: 126.7052,
     address: "Korea",
   },
+    {
+    id: 8,
+    lat: 25.3463,
+    lng: 55.4209,
+    address: "UAE",
+  },
+  {
+    id: 9,
+    lat: 30.5085,
+    lng: 47.7804,
+    address: "Iraq",
+  },
+  {
+    id: 10,
+    lat: 23.5880,
+    lng: 58.3829,
+    address: "Oman",
+    offsetY: 10,
+  },
+  {
+    id: 11,
+    lat: 11.5564,
+    lng: 104.9282,
+    address: "Cambodia",
+  },
+
 ];
+
+// Sharjah — Al Furat Street, Industrial Area 4, Sharjah, UAE 
+// Basra — Nejoum Aljazeera Group Basra Bridge, Basra 
+// Muscat — Amabilah Al Sanaya Road No.10, Muscat, Oman 
+// Texas (Houston) — Nejoum Express, 6012 Murphy St., Houston, TX 77033-1008
+// Georgia (Savannah) — 46 Artly Road, Savannah, GA 31408 
+// New Jersey (Jersey City) — Nejoum Express, 1 Linden Avenue E, Jersey City, NJ 07305 
+// Cambodia (Phnom Penh) — 528 ST 1019, Sangkat Phnom Penh Thmey, Khan Sen Sok, Phnom Penh Cambodia
 
 // Convert lat/lng → percentage position
 const getPosition = (lat: number, lng: number) => {
