@@ -75,8 +75,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className='flex items-center'>
-            <img src="/logo-icon.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none" />
-            <img src="/logo-name.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none" />
+            <img src="/logo-icon.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none header_logo" />
+            <img src="/logo-name.png" alt="Nejoum Shipping" className="h-10 md:h-12 w-auto object-contain filter-none header_logo" />
           </div>
         </Link>
 
@@ -200,7 +200,7 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 rounded-lg ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}
+          className={`lg:hidden p-2 rounded-lg ${scrolled ? 'text-primary-foreground' : 'text-primary-foreground'}`}
         >
           {mobileOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
@@ -298,7 +298,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={() => setQuoteOpen(true)}
-                className="gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover-lift"
+                className="gradient-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold hover-lift"
               >
                 {t('nav.getQuote')}
               </button>

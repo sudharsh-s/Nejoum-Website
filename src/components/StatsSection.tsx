@@ -9,21 +9,21 @@ import LocalShipping from "@mui/icons-material/LocalShipping";
 const stats = [
   {
     icon: Language,
-    value: 300,
+    value: 150,
     suffix: "k+",
-    label: "Container Delivered ",
+    label: "Vehicles Shipped Annually",
   },
   {
     icon: WorkspacePremiumIcon,
-    value: 23,
+    value: 3000,
     suffix: "+",
-    label: "Years of Experience",
+    label: "Containers Delivered Monthly",
   },
   {
     icon: LocalShipping,
-    value: 1000,
-    suffix: "k+",
-    label: "Car Delivered",
+    value: 12000,
+    suffix: "+",
+    label: "Vehicles Delivered Monthly",
   },
 ];
 
@@ -48,16 +48,16 @@ export default function StatsSection() {
     <section ref={ref} className="relative bg-white">
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 bottom-10 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-5 md:pt-20 pb-4 md:pb-7 lg:pb-8">
 
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="bg-white border border-white/20 rounded-2xl py-10 px-12 shadow-2xl"
+          className="bg-white border border-white/20 rounded-2xl py-3 md:py-7 lg:py-10 px-7 md:px-5 lg:px-12 shadow-2xl"
         >
 
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-black/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-x-0 md:divide-x divide-y md:divide-y-0 divide-black/20">
 
             {stats.map((stat, index) => {
 
@@ -72,7 +72,7 @@ export default function StatsSection() {
                     duration: 0.6,
                     delay: index * 0.2,
                   }}
-                  className="flex items-center gap-5 px-6 py-6 text-black"
+                  className="grid md:flex items-center justify-center md:justify-start gap-2 md:gap-5 px-6 py-6 text-black text-center md:text-left"
                 >
 
                   {/* Icon */}
@@ -93,7 +93,7 @@ export default function StatsSection() {
                   <div>
 
                     {/* Count */}
-                    <div className="text-4xl font-bold">
+                    <div className="text-3xl md:text-4xl font-bold">
 
                       {isInView && (
                         <CountUp

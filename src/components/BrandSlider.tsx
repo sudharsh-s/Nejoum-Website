@@ -31,7 +31,7 @@ const logos = [
 
 export default function BrandSlider() {
   return (
-    <section className="bg-white pt-12 pb-8">
+    <section className="bg-white pt-10 md:pt-12 pb-6 md:pb-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <div className="text-center mb-1">
           <h2 className="title">Trusted <span>Partner</span></h2>
@@ -55,11 +55,11 @@ export default function BrandSlider() {
           }}
           allowTouchMove={false}
           breakpoints={{
-            320: { slidesPerView: 2, spaceBetween: 30 },
+            320: { slidesPerView: 2, spaceBetween: 20 },
             768: { slidesPerView: 3, spaceBetween: 40 },
             1024: { slidesPerView: 5, spaceBetween: 50 },
           }}
-          className="brand-swiper !py-10"
+          className="brand-swiper !py-5 md:!py-10"
         >
           {logos.map((logo, index) => (
             <SwiperSlide key={index}>
@@ -67,7 +67,7 @@ export default function BrandSlider() {
                 <img
                   src={logo}
                   alt="partner"
-                  className="h-24 w-full object-contain transition duration-300"
+                  className="h-20 md:h-24 w-full object-contain transition duration-300"
                 />
               </div>
             </SwiperSlide>

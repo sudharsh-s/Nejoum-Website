@@ -42,7 +42,7 @@ const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) =
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-[#f5f5f7] overflow-hidden">
+    <section className="py-14 md:py-20 bg-[#f5f5f7] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TOP TEXT */}
@@ -53,24 +53,24 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="max-w-7xl mb-14"
         >
-          <div className="flex items-start gap-10">
-            <div className="w-[45%]">
+          <div className="grid lg:flex items-start gap-10">
+            <div className="w-full lg:w-[45%]">
               {/* <p className="text-md text-primary mb-8 font-medium">
                 ● About Us
               </p> */}
-              <img src={ceo} className="w-[100%] mb-6" />
+              <img src={ceo} className="w-[100%] mb-0 md:mb-6" />
             </div>
 
-            <div className="w-[55%]">
+            <div className="w-full lg:w-[55%]">
 
-              <h2 className="text-4xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-6">
+              <h2 className="text-[27px] md:text-[32px] lg:text-[40px] font-bold text-gray-900 leading-tight mb-6">
                 Trusted by the World’s Leading Companies for Over 23 Years
               </h2>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                 We have been at the forefront of the global automotive auction and logistics industry. Our journey began with a clear mission — to bring <b>transparency, efficiency, and trust</b> into vehicle trading and logistics.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-3">
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base mt-3">
                 Today, we proudly stand among the <b>largest and most trusted automotive service providers across the Middle East and global markets</b>, connecting buyers, sellers, dealers, and logistics partners through a powerful ecosystem built on reliability and innovation.
               </p>
 
@@ -86,24 +86,26 @@ const AboutSection = () => {
 
           {/* LEFT IMAGE */}
           <div className="relative overflow-hidden">
-            <img src={img1} className="w-full h-[550px] object-cover" />
-            <div className="absolute top-0 bg-[linear-gradient(0deg,#02030852_0%,#02030852_100%)]"></div>
+            <img src={img1} className="w-full h-[350px] md:h-[550px] object-cover" />
+            <div className="absolute inset-0 bg-[linear-gradient(0deg,#02030852_0%,#02030852_100%)]"></div>
 
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-8xl font-bold">
-                <Counter end={22} />+
-              </h3>
-              <p className="text-sm mt-2">Branches</p>
+            <div className="absolute inset-0 flex items-center justify-center text-center md:items-end md:justify-start md:text-left md:bottom-6 md:left-6 md:inset-auto text-white">
+              <div>
+                <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
+                  <Counter end={22} />+
+                </h3>
+                <p className="text-sm mt-2">Branches</p>
+              </div>
             </div>
           </div>
 
           {/* CENTER IMAGE */}
           <div className="relative overflow-hidden">
-            <img src={img2} className="w-full h-[550px] object-cover" />
+            <img src={img2} className="w-full h-[350px] md:h-[550px] object-cover" />
 
             <div className="absolute inset-0 flex items-center justify-center text-white text-center">
               <div>
-                <h3 className="text-8xl font-bold">
+                <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
                   <Counter end={57} />+
                 </h3>
                 <p className="text-sm mt-2">Countries Covered</p>
@@ -113,13 +115,15 @@ const AboutSection = () => {
 
           {/* RIGHT IMAGE */}
           <div className="relative overflow-hidden">
-            <img src={img3} className="w-full h-[550px] object-cover" />
+            <img src={img3} className="w-full h-[350px] md:h-[550px] object-cover" />
 
-            <div className="absolute top-6 right-6 text-white text-right">
-              <h3 className="text-8xl font-bold">
-                <Counter end={500} />k+
-              </h3>
-              <p className="text-sm mt-2">Delivered Packages</p>
+            <div className="absolute inset-0 flex items-center justify-center text-center md:items-start md:justify-end md:text-right md:top-6 md:right-6 md:inset-auto text-white">
+              <div>
+                <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
+                  <Counter end={500} />k+
+                </h3>
+                <p className="text-sm mt-2">Delivered Packages</p>
+              </div>
             </div>
           </div>
 
@@ -127,7 +131,7 @@ const AboutSection = () => {
 
 
         {/* Bottom Feature Cards */}
-        <div className="grid grid-cols-3 gap-5 mt-12 border-t border-l border-r divide-x divide-grey/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12 border-t border-l border-r divide-y divide-x-0 md:divide-y-0 md:divide-x divide-grey/10">
 
           <Feature
             icon={VerifiedUser}

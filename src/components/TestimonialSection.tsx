@@ -32,18 +32,18 @@ const TestimonialSection = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="pt-24 pb-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 flex items-center">
+    <section className="pt-12 md:pt-16 lg:pt-24 pb-16 md:pb-20 lg:pb-32 bg-white">
+      <div className="block md:hidden px-6">
+        <p className="text-md text-primary mb-4 font-medium">● Testimonial</p>
+        <h2 className="text-[27px] lg:text-[40px] font-bold leading-tight mb-8">Our Customers Share Their Success Stories</h2>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 block md:flex items-center">
 
         {/* LEFT IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="relative w-[30%]"
+          className="relative w-full md:w-[30%]"
         >
-          <div className="relative max-w-[354px] rounded-[0_50px_500px_500px]">
+          <div className="relative max-w-[80%] md:max-w-[354px] rounded-[0_50px_500px_500px]">
             
             {/* Orange Border Shape */}
             <div className="bg-transparent border-[3px] border-primary rounded-[0_50px_500px_500px] top-[40px] -left-[40px] z-[1] absolute w-full h-full"></div>
@@ -58,17 +58,15 @@ const TestimonialSection = () => {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="w-[70%] pl-14"
+          className="w-full md:w-[70%] pl-0 md:pl-14 mt-10 md:mt-0"
         >
 
-          <p className="text-md text-primary mb-4 font-medium">● Testimonial</p>
-          <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">Our Customers Share Their Success Stories</h2>
+          <div className="hidden md:block">
+            <p className="text-md text-primary mb-4 font-medium">● Testimonial</p>
+            <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">Our Customers Share Their Success Stories</h2>
 
-          <div className="border-t border-gray-300 my-4"></div>
+            <div className="border-t border-gray-300 my-4"></div>
+          </div>
 
           {/* SLIDER */}
           <Swiper
@@ -110,22 +108,22 @@ const TestimonialSection = () => {
           <div className="flex items-center gap-4 mt-10">
             <button
               ref={prevRef}
-              className="bg-primary text-white w-12 h-12 rounded-lg flex items-center justify-center hover:scale-105 transition"
+              className="bg-primary text-white w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center hover:scale-105 transition"
             >
               <ArrowBackIcon />
             </button>
 
             <button
               ref={nextRef}
-              className="bg-primary text-white w-12 h-12 rounded-lg flex items-center justify-center hover:scale-105 transition"
+              className="bg-primary text-white w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center hover:scale-105 transition"
             >
               <ArrowForwardIcon />
             </button>
 
-            <div className="flex-1 h-[2px] bg-primary ml-6"></div>
+            <div className="hidden md:block flex-1 h-[2px] bg-primary ml-6"></div>
 
             {/* Thumbnails */}
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               {testimonials.map((item, i) => (
                 <img
                   key={i}

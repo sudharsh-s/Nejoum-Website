@@ -7,7 +7,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const RequestQuote = () => {
   return (
-    <section className="relative py-24 bg-[#0b3574] text-white scroll-mt-28">
+    <section className="relative py-12 md:py-24 bg-[#0b3574] text-white scroll-mt-28">
 
       {/* Background Map */}
       <div
@@ -15,20 +15,20 @@ const RequestQuote = () => {
         style={{ backgroundImage: `url(${worldMap})` }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <p className="text-md text-secondary mb-4 font-medium">
             ● Request a Quote
           </p>
 
-          <h2 className="text-4xl lg:text-[40px] font-bold leading-tight mb-6">
+          <h2 className="text-[27px] lg:text-[40px] font-bold leading-tight mb-6">
             Efficient, Safe, & Swift Logistics{" "}
             <span className="text-secondary relative inline-block">
               SOLUTION!
@@ -45,11 +45,10 @@ const RequestQuote = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.15, duration: 0.5 }}
+                className="flex items-start gap-3"
               >
                 <span className="text-secondary">➤</span>
                 {item}
@@ -64,17 +63,17 @@ const RequestQuote = () => {
 
         {/* RIGHT FORM CARD */}
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="bg-white text-black p-10 rounded-b-xl shadow-2xl absolute right-0 bottom-[20px] w-1/2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="bg-white text-black p-5 md:p-10 rounded-xl md:rounded-b-xl shadow-2xl static lg:absolute right-0 bottom-[20px] w-full lg:w-1/2 my-4 lg:my-0"
         >
-          <h3 className="text-3xl font-bold mb-6 text-black">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black">
             Request a Quote
           </h3>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <input className="border rounded-md py-2 px-2.5" placeholder="Name" />
             <input className="border rounded-md py-2 px-2.5" placeholder="Email" />
             <input className="border rounded-md py-2 px-2.5" placeholder="Phone" />
@@ -83,7 +82,7 @@ const RequestQuote = () => {
             <input className="border rounded-md py-2 px-2.5" placeholder="Destination" />
           </div>
 
-          <div className="grid grid-cols-2 gap-6 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <select className="border rounded-md py-2 px-2.5">
               <option>Freight Type</option>
             </select>

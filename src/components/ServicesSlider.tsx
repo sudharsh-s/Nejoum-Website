@@ -45,7 +45,7 @@ const services = [
 
 const ServicesSlider = () => {
   return (
-    <section className="bg-[#032d6b] py-24 overflow-hidden relative">
+    <section className="bg-[#032d6b] py-16 md:py-24 overflow-hidden relative">
 
       {/* Vertical Lines Background */}
       <div className="absolute inset-0 flex justify-between px-[15%] pointer-events-none">
@@ -54,7 +54,7 @@ const ServicesSlider = () => {
         <div className="w-px bg-white/20"></div>
       </div>
 
-      <div className="relative z-10 pl-24">
+      <div className="relative z-10 pl-7 md:pl-16 lg:pl-24">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={70}
@@ -65,9 +65,9 @@ const ServicesSlider = () => {
           }}
           loop={true}
           breakpoints={{
-            0: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3.3 },
+            0: { slidesPerView: 1.2, spaceBetween: 30 },
+            768: { slidesPerView: 2.2, spaceBetween: 40 },
+            1024: { slidesPerView: 3.3, spaceBetween: 70 },
           }}
         >
           {services.map((service, index) => (
@@ -76,11 +76,11 @@ const ServicesSlider = () => {
                 whileHover="hover"
                 className="group text-white space-y-6"
               >
-                <h3 className="text-3xl font-semibold">
+                <h3 className="text-[22px] md:text-3xl font-semibold">
                   {service.title}
                 </h3>
 
-                <p className="text-white/70 max-w-sm">
+                <p className="text-white/70 max-w-sm text-sm md:text-base">
                   {service.desc}
                 </p>
 
@@ -91,7 +91,7 @@ const ServicesSlider = () => {
                   }}
                   className="flex items-center gap-2 cursor-pointer"
                 >
-                  <span className="text-white/80">Read More</span>
+                  <span className="text-white/80 text-sm md:text-base">Read More</span>
                   <span className="transition-transform group-hover:translate-x-2">
                     →
                   </span>
@@ -102,7 +102,7 @@ const ServicesSlider = () => {
                   <motion.img
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-[280px] object-cover"
+                    className="w-full h-[200px] md:h-[280px] object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   />

@@ -90,7 +90,7 @@ export default function ServiceDetail() {
     <>
 
       {/* Hero Section with Background Video */}
-      <section className="relative h-[30vh] md:h-[50vh] lg:h-[80vh] flex items-center">
+      <section className="relative h-[90vh] md:h-[70vh] lg:h-[80vh] flex items-center">
 
         {/* Slides */}
         {slides.map((slide, index) => (
@@ -124,28 +124,28 @@ export default function ServiceDetail() {
         <div className="absolute inset-0 bg-black/25" />
 
         {/* Content */}
-        <div className="relative z-10 px-6 w-[85%] mx-auto">
+        <div className="relative z-10 px-6 w-full md:w-[85%] mx-auto">
 
           <motion.div
             key={current + "-content"}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-[60%]"
+            className="w-full md:w-[60%]"
           >
 
             {/* Heading */}
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight whitespace-pre-line text-white mb-4">
+            <h1 className="text-[35px] md:text-[32px] lg:text-6xl font-bold leading-10 md:leading-tight whitespace-pre-line text-white mb-4">
               {slides[current].title}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-base md:text-lg text-white/80 mb-8">
               {slides[current].subtitle}
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4">
+            <div className="inline-grid md:flex gap-4">
 
               <Link
                 to="/contact"
@@ -183,35 +183,35 @@ export default function ServiceDetail() {
       </section>
 
       {/* SERVICE DETAIL CONTENT */}
-      <section className="pt-20 pb-20 bg-white" ref={contentRef}>
+      <section className="pt-14 md:pt-14 lg:pt-20 pb-5 md:pb-20 bg-white" ref={contentRef}>
 
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10 items-start">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
 
           {/* RIGHT GALLERY */}
-          <div className="lg:col-span-1 h-full relative">
+          <div className="lg:col-span-1 h-full relative order-2 lg:order-1">
 
-            <div className="sticky top-24">
+            <div className="static md:sticky top-24">
               <ServiceSidebar />
             </div>
 
           </div>
 
           {/* LEFT MAIN */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-1 lg:order-1">
 
             {/* TITLE */}
-            <h2 className="text-[35px] leading-10 font-bold mb-5">
+            <h2 className="text-[27px] md:text-[35px] leading-8 md:leading-10 font-bold mb-3 md:mb-5">
               {service.title}
             </h2>
 
             {/* TEXT */}
             <p
-              className="text-gray-500 text-base leading-6 mb-6"
+              className="text-gray-500 text-sm md:text-base leading-5 md:leading-6 mb-6"
               dangerouslySetInnerHTML={{ __html: service.introText }}
             />
 
             <p
-              className="text-gray-500 text-base leading-6 mb-6"
+              className="text-gray-500 text-sm md:text-base leading-5 md:leading-6 mb-6"
               dangerouslySetInnerHTML={{ __html: service.introText1 }}
             />
 
@@ -221,7 +221,7 @@ export default function ServiceDetail() {
                   <motion.img
                     key={i}
                     src={img}
-                    className="w-full h-64 object-cover rounded-lg shadow-md"
+                    className="w-full h-52 md:h-64 object-cover rounded-lg shadow-md"
                   />
                 ))}
               </div>
@@ -231,7 +231,7 @@ export default function ServiceDetail() {
               <h3 className="text-xl text-gray-600 font-bold mb-6">
                 Key Benefits
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-5 md:gap-8">
         
                 {service.benefits?.map((item, index) => (
                   <motion.div
@@ -255,7 +255,7 @@ export default function ServiceDetail() {
                     </div>
         
                     {/* Description */}
-                    <p className="text-gray-500 leading-relaxed text-base">
+                    <p className="text-gray-500 leading-5 md:leading-relaxed text-sm md:text-base">
                       {item.desc}
                     </p>
         
@@ -280,7 +280,7 @@ export default function ServiceDetail() {
                       <span>{item}</span>
                     ) : (
                       <span>
-                        <span className="font-semibold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-base leading-6">{item.description}</span>
+                        <span className="font-semibold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-sm md:text-base leading-5 md:leading-6">{item.description}</span>
                       </span>
                     )}
                   </li>
@@ -299,7 +299,7 @@ export default function ServiceDetail() {
                   <li key={i} className="flex gap-3 items-start">
                     <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
 
-                    <span className="text-gray-500 text-base leading-6"
+                    <span className="text-gray-500 text-sm md:text-base leading-5 md:leading-6"
                       dangerouslySetInnerHTML={{ __html: item }}
                     />
                   </li>

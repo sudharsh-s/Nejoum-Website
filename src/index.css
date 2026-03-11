@@ -87,6 +87,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  @media (max-width: 768px) {
+    .title {
+      @apply text-[27px];  
+    }
+  }
 }
 
 @layer components {
@@ -213,6 +218,31 @@
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1600px) {
+  .header_logo {
+    height: 55px !important;
+  }
+}
+
+.iaaMartketing_home .iaaMartketing_dis, .iaaMartketing_home .iaaMartketing_btn {
+  display: none;
+}
+.iaaMartketing_home .iaaMartketing_sec {
+  padding-bottom: 0px;
+}
+.iaaMartketing_home .iaaMartketing_copy {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .iaaMartketing_home .iaaMartketing_tit {
+    font-size: 23px;
+  }
+  .iaaMartketing_home .iaaMartketing_grid {
+    gap: 0px;
   }
 }
 

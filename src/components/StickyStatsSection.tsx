@@ -12,9 +12,9 @@ export default function StickyStatsSection() {
   });
 
   return (
-    <section className="bg-[#eef3f7] py-24">
+    <section className="bg-[#eef3f7] py-16 md:py-24">
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 px-6">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-20 px-6">
 
         {/* LEFT STICKY IMAGE */}
         <div className="relative">
@@ -23,7 +23,7 @@ export default function StickyStatsSection() {
 
             <img
               src={team}
-              className="w-full h-[600px] object-cover"
+              className="w-full h-full md:h-[600px] object-cover"
             />
 
           </div>
@@ -38,17 +38,17 @@ export default function StickyStatsSection() {
             Vehicle Logistics Experts
           </p>
 
-          <h2 className="text-5xl font-bold leading-tight text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 mb-6">
             Smart vehicle logistics built for global mobility
           </h2>
 
-          <p className="text-gray-500 leading-relaxed text-lg mb-5">
+          <p className="text-gray-500 leading-relaxed text-base md:text-lg mb-5">
             We provide secure vehicle storage, efficient transportation, and complete 
             pre-delivery inspection services designed to streamline automotive logistics 
             across international markets.
           </p>
 
-          <p className="text-gray-500 leading-relaxed text-lg">
+          <p className="text-gray-500 leading-relaxed text-base md:text-lg">
             From short-term parking to long-term storage maintenance and cross-border 
             vehicle transport, our solutions ensure your fleet remains safe, optimized, 
             and ready for delivery at every stage.
@@ -68,34 +68,34 @@ export default function StickyStatsSection() {
           </motion.div>
 
           {/* STATS GRID */}
-          <div ref={ref} className="grid grid-cols-2 gap-16 pt-10">
+          <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16 pt-6 md:pt-10">
 
             <div>
-              <h3 className="text-6xl font-bold">
+              <h3 className="text-[45px] md:text-6xl font-bold">
                 {inView && <CountUp end={23} duration={2} />}+
               </h3>
-              <p className="text-gray-500 font-semibold mt-2">Years of experience</p>
+              <p className="text-gray-500 font-semibold mt-0 md:mt-2">Years of experience</p>
             </div>
 
             <div>
-              <h3 className="text-6xl font-bold">
+              <h3 className="text-[45px] md:text-6xl font-bold">
                 {inView && <CountUp end={500} duration={2} />}+
               </h3>
-              <p className="text-gray-500 font-semibold mt-2">Employees</p>
+              <p className="text-gray-500 font-semibold mt-0 md:mt-2">Employees</p>
             </div>
 
             <div>
-              <h3 className="text-6xl font-bold">
+              <h3 className="text-[45px] md:text-6xl font-bold">
                 {inView && <CountUp end={15} duration={2} />}+
               </h3>
-              <p className="text-gray-500 font-semibold mt-2">Offices</p>
+              <p className="text-gray-500 font-semibold mt-0 md:mt-2">Offices</p>
             </div>
 
             <div>
-              <h3 className="text-6xl font-bold">
+              <h3 className="text-[45px] md:text-6xl font-bold">
                 {inView && <CountUp end={57} duration={2} />}+
               </h3>
-              <p className="text-gray-500 font-semibold mt-2">Countries</p>
+              <p className="text-gray-500 font-semibold mt-0 md:mt-2">Countries</p>
             </div>
 
           </div>

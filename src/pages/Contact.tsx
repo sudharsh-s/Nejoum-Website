@@ -10,11 +10,11 @@ import bg from "@/assets/contact.webp";
 export default function ContactSection() {
   return (
     <div>
-      <section className="relative bg-black text-white pt-36 pb-28 overflow-hidden">
+      <section className="relative bg-black text-white pt-28 md:pt-36 pb-16 md:pb-28 overflow-hidden">
 
         <img src={bg} alt="Contact Background" className="absolute inset-0 w-full h-full object-cover opacity-70" />
 
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 md:gap-20 items-center relative">
 
           {/* LEFT SIDE */}
           <div>
@@ -24,14 +24,14 @@ export default function ContactSection() {
               Contact Us
             </p> */}
 
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-16">
+            <h2 className="text-[27px] md:text-6xl font-bold leading-tight mb-7 md:mb-16">
               Contact Us
             </h2>
 
             {/* Contact Info */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
-              <div>
+              <div className="mb-7 md:mb-0">
                 <h4 className="text-xl font-bold mb-4">UAE</h4>
                 {/* Email */}
                 <div className="flex items-center gap-5">
@@ -114,53 +114,53 @@ export default function ContactSection() {
           <div className="relative">
 
             {/* Glass Card */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 md:p-8 shadow-[0_0_40px_rgba(255,255,255,0.05)]">
 
               <div className="text-center mb-10">
                 <h3 className="text-2xl font-bold mb-2">
                   Get In Touch
                 </h3>
-                <p className="text-white/70">
+                <p className="text-white/70 text-sm md:text-base">
                   Send us a message and we will get back to you as soon as possible.
                 </p>
               </div>
 
               {/* Form Fields */}
-              <div className="space-y-6">
+              <div className="space-y-3 md:space-y-6">
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                   <input
                     placeholder="Enter your name"
-                    className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition"
+                    className="bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition"
                   />
                   <input
                     placeholder="Enter your email"
-                    className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition"
+                    className="bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition"
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                   <input
                     placeholder="Enter weight in kg"
-                    className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition"
+                    className="bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition"
                   />
-                  <select className="bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
+                  <select className="bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
                     <option>Choose type of service</option>
                   </select>
                 </div>
 
-                <select className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
+                <select className="w-full bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
                   <option>Choose pickup city</option>
                 </select>
 
-                <select className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
+                <select className="w-full bg-white/5 border border-white/10 rounded-xl px-3 md:px-6 py-4 outline-none focus:border-orange-500 transition text-white/70">
                   <option>Choose delivery city</option>
                 </select>
 
               </div>
 
               {/* Submit Button */}
-              <button className="w-full mt-10 gradient-primary transition py-4 rounded-xl text-lg font-semibold">
+              <button className="w-full mt-7 md:mt-10 gradient-primary transition py-4 rounded-xl text-base md:text-lg font-semibold">
                 Send Request
               </button>
 

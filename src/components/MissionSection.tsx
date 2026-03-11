@@ -45,7 +45,7 @@ const MissionSection = () => {
           </motion.p>
 
           <motion.h2
-            className="text-white text-4xl md:text-6xl lg:text-6xl font-semibold leading-tight max-w-5xl"
+            className="text-white text-3xl md:text-6xl lg:text-6xl font-semibold leading-tight max-w-5xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}

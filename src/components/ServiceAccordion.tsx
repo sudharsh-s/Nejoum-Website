@@ -35,7 +35,7 @@ export default function ServiceAccordion({ items }: Props) {
             {/* HEADER */}
             <button
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-base text-gray-600"
+              className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-sm md:text-base text-gray-600"
             >
               {item.title}
 
@@ -67,7 +67,7 @@ export default function ServiceAccordion({ items }: Props) {
                     {item.content.map((text, i) => (
                       <div key={i} className="flex gap-2">
                         <span
-                          className="text-gray-500 text-base leading-6"
+                          className="text-gray-500 text-sm md:text-base leading-6"
                           dangerouslySetInnerHTML={{ __html: text }}
                         />
                       </div>

@@ -29,16 +29,16 @@ const QuoteModal = ({ open, onClose }: Props) => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 flex items-center justify-center z-[101] p-4"
           >
-            <div className="bg-white rounded-xl shadow-2xl w-full max-w-lg p-6">
+            <div className="bg-white rounded-xl shadow-2xl w-full max-w-md p-4 md:p-6">
 
-              <h3 className="text-[25px] font-bold mb-6 text-gray-900">
+              <h3 className="text-[22px] md:text-[25px] font-bold mb-6 text-gray-900">
                 Request a Quote
               </h3>
 
-              <form className="space-y-6">
+              <form className="space-y-4 md:space-y-6">
 
                 {/* Grid Fields */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-4 md:gap-6">
 
                   <input
                     type="text"
@@ -64,7 +64,7 @@ const QuoteModal = ({ open, onClose }: Props) => {
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
                   />
 
-                  <input
+                  {/* <input
                     type="text"
                     placeholder="State"
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
@@ -74,12 +74,12 @@ const QuoteModal = ({ open, onClose }: Props) => {
                     type="text"
                     placeholder="Destination"
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
-                  />
+                  /> */}
 
                 </div>
 
                 {/* Freight Type */}
-                <div>
+                {/* <div>
 
                   <select className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition">
                     <option>Select Freight Type</option>
@@ -90,16 +90,16 @@ const QuoteModal = ({ open, onClose }: Props) => {
                     <option>Warehouse Storage</option>
                   </select>
 
-                </div>
+                </div> */}
 
                 {/* Submit */}
-                <div className="flex justify-end gap-4 pt-4">
+                <div className="grid md:flex justify-end gap-3 md:gap-4 pt-4">
 
-                  <button type="button" onClick={onClose} className="px-4 py-2 rounded-lg bg-gray-200" > Cancel </button>
+                  <button type="button" onClick={onClose} className="px-6 py-3 rounded-lg bg-gray-200" > Cancel </button>
 
                   <button
                     type="submit"
-                    className="flex items-center gap-2 gradient-primary text-white font-semibold px-6 py-3 rounded-lg transition-all"
+                    className="flex items-center gap-2 gradient-primary text-white px-6 py-3 rounded-lg transition-all"
                   >
                     Submit Request
                     <ArrowOutwardIcon fontSize="small" />

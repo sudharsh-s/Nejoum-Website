@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BoltIcon from "@mui/icons-material/Bolt";
 import PublicIcon from "@mui/icons-material/Public";
+import iaaLogo from "@/assets/nejoum-iaa-logo.png";
 
 import StatsSection from "@/components/StatsSection";
 import AboutStatsSection from "@/components/AboutStatsSection";
@@ -14,6 +15,8 @@ import BrandSlider from "@/components/BrandSlider";
 import RequestQuote from "@/components/RequestQuote";
 import TestimonialSection from "@/components/TestimonialSection";
 import AwardsSection from "@/components/AwardsSection";
+import LocationSection from "@/components/LocationSection";
+import IAAMarketAlliance from "@/components/IAAMarketAlliance";
 
 import heroImg from '@/assets/bg-home.webp';
 
@@ -90,19 +93,19 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-20 container mx-auto px-20 -mt-40">
+        <div className="relative z-20 container mx-auto px-5 md:px-20 -mt-20 md:-mt-40">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-10 md:leading-tight mb-6">
               Smart Logistics <br />
               Seamless Growth
             </h1>
 
-            <div className="flex items-center gap-6 mb-8 text-white/70 text-sm">
+            <div className="grid md:flex items-center gap-3 md:gap-6 mb-8 text-white/70 text-sm">
               <span className='flex items-center gap-2'>
                 <span className="w-[20px] h-[20px] flex text-center justify-center items-center backdrop-blur-md bg-white/25 rounded-[4px]"><BoltIcon className='!text-xs' /> </span>
                 Your Growth, Our Logistics
@@ -113,7 +116,7 @@ const Index = () => {
               </span>
             </div>
 
-            <div className="flex gap-4">
+            <div className="inline-grid justify-center md:justify-start md:flex gap-3 md:gap-4">
               <Link
                 to="/contact"
                 className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
@@ -140,17 +143,33 @@ const Index = () => {
         </div>
 
         {/* Bottom Running Text */}
-        <div className="absolute bottom-6 left-0 w-full overflow-hidden marquee_home_sec">
+        {/* <div className="absolute bottom-6 left-0 w-full overflow-hidden marquee_home_sec">
           <div className="marquee_home">
-            <h2 className="text-[120px] md:text-[90px] font-extrabold text-white/50 whitespace-nowrap">
+            <h2 className="text-[60px] md:text-[70px] lg:text-[90px] font-extrabold text-white/50 whitespace-nowrap">
               NEJOUM AL JAZEERA NEJOUM AL JAZEERA NEJOUM AL JAZEERA NEJOUM AL JAZEERA
             </h2>
           </div>
+        </div> */}
+        <div className="absolute bottom-6 left-0 w-full overflow-hidden marquee_home_sec">
+          <div className="marquee_home flex items-center gap-8 bg[##191919a8]">
+
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-8">
+                
+                <h2 className="text-[60px] md:text-[70px] lg:text-[75px] font-extrabold text-white/60 whitespace-nowrap">
+                  NEJOUM AL JAZEERA - IAA MARKET ALLIANCE
+                </h2>
+
+              </div>
+            ))}
+
+          </div>
         </div>
       </section>
+      
 
-      <div>
-        <StatsSection />
+      <div className='bg-white border border-white/20 rounded-2xl py-5 md:py-7 lg:py-10 px-5 md:px-5 lg:px-12 shadow-2xl relative w-[90%] md:w-[70%] mx-auto -mt-[40px] mb-[60px] iaaMartketing_home'>
+        <IAAMarketAlliance />
       </div>
 
       <AboutStatsSection />
@@ -161,9 +180,13 @@ const Index = () => {
 
       <BrandSlider />
 
+      <LocationSection />
+
       <AwardsSection />
 
       <RequestQuote />
+
+      <StatsSection />
 
       <TestimonialSection />
 

@@ -61,11 +61,11 @@ const AboutPageHeader = () => {
                   transition={{ duration: 1 }}
                   className="max-w-2xl text-white"
                 >
-                  <h1 className="text-4xl lg:text-6xl font-bold leading-tight whitespace-pre-line">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight whitespace-pre-line">
                     {slide.title}
                   </h1>
 
-                  <p className="mt-6 text-lg text-white/80 max-w-lg">
+                  <p className="mt-6 text-base md:text-lg text-white/80 max-w-lg">
                     {slide.desc}
                   </p>
 

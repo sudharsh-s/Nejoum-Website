@@ -12,7 +12,7 @@ export default function ServiceSidebar() {
     <div>
       <div className="bg-[#f3f3f3] p-5 rounded-xl">
 
-        <h3 className="text-2xl font-bold mb-6">
+        <h3 className="text-xl md:text-2xl font-bold mb-6">
           Our Services
         </h3>
 
@@ -39,7 +39,7 @@ export default function ServiceSidebar() {
                 >
 
                   {/* Title */}
-                  <span className="pl-5 font-medium text-base">
+                  <span className="pl-5 font-medium text-sm md:text-base">
                     {service.title}
                   </span>
 
@@ -66,7 +66,7 @@ export default function ServiceSidebar() {
           </div>
 
           <div className="text-center px-8 py-7">
-            <h2 className="text-white text-3xl font-bold leading-snug">
+            <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug">
               Let’s Discuss Your Needs
             </h2>
             <p className="text-white mt-3 text-sm">Tell us what you need, and our experts will get back to you with the right solution.</p>

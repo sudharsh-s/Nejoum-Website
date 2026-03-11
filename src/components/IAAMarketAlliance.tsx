@@ -7,9 +7,9 @@ import iaaLogo from "@/assets/nejoum-iaa-logo.png";
 
 export default function IAAMarketAlliance() {
   return (
-    <section className="pt-2 pb-28">
+    <section className="pt-0 md:pt-2 pb-10 md:pb-28 iaaMartketing_sec">
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-10 md:gap-16 iaaMartketing_grid">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -17,14 +17,14 @@ export default function IAAMarketAlliance() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-[40px] font-extrabold text-black mb-3">
+          <h2 className="text-[27px] md:text-[35px] lg:md:text-[40px] font-extrabold text-black mb-3 iaaMartketing_tit">
             IAA Market Alliance
           </h2>
 
-          <p className="text-gray-600 text-base leading-relaxed mb-8">
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8 iaaMartketing_copy">
             We are proud to announce that <strong>Nejoum Al Jazeera</strong> is now the sole
             official Market Alliance of IAA in the UAE.{" "}
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-semibold iaaMartketing_dis">
               Discover more about the benefits and how to register your account
               with IAA in the UAE.
             </span>
@@ -32,7 +32,7 @@ export default function IAAMarketAlliance() {
 
           {/* Button */}
           <a href="https://help.iaai.com/s/broker-info?language=en_US&varAccountId=0013g000007PwUcAAK" target="_blank" rel="noopener noreferrer"
-            className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inlineflex items-center gap-2"
+            className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inlineflex items-center gap-2 iaaMartketing_btn"
           >
             Read More
             <motion.span

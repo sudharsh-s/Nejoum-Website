@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="relative text-white pt-24 pb-10">
+    <footer className="relative text-white pt-10 md:pt-24 pb-5 md:pb-10">
 
       <img src={foooterBg} alt="" className="absolute top-0 w-full h-full object-cover" />
 
@@ -18,9 +18,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Glass Container */}
-        <div className="bg-[#032d6b] backdrop-blur-2xl rounded-[40px] p-12">
+        <div className="bg-[#032d6b] backdrop-blur-2xl rounded-3xl md:rounded-[40px] p-7 md:p-12">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 pb-5 md:pb-0">
 
             {/* Logo Column */}
             <div>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
-              <ul className="space-y-3 text-white/60">
+              <ul className="space-y-2 md:space-y-3 text-white/80 md:text-white/60">
                 {[
                   { label: "Home", path: "/" },
                   { label: "About Us", path: "/about" },
@@ -85,7 +85,7 @@ const Footer = () => {
                   <li key={i}>
                     <Link
                       to={item.path}
-                      className="hover:text-white transition"
+                      className="hover:text-white transition text-sm md:text-base"
                     >
                       {item.label}
                     </Link>
@@ -101,7 +101,7 @@ const Footer = () => {
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
-              <ul className="space-y-3 text-white/60">
+              <ul className="space-y-2 md:space-y-3 text-white/80 md:text-white/60">
                 {[
                   { label: "Auction Account Services", path: "/services/auction-account-services" },
                   { label: "Towing Services", path: "/services/towing-services" },
@@ -130,7 +130,7 @@ const Footer = () => {
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
-              <div className="space-y-3 text-white/60 mb-6">
+              <div className="space-y-2 md:space-y-3 text-white/80 md:text-white/60 mb-6">
                 <div className="flex justify-between">
                   <span>Week Days</span>
                   <span>09.00 - 7.00</span>
@@ -154,7 +154,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="flex flex-col md:flex-row justify-center items-center mt-10 text-white/60 text-sm">
+        <div className="flex flex-col md:flex-row justify-center items-center mt-10 text-white/60 text-sm relative z-10 px-5 md:px-0 text-center">
           <p>
             Copyright © 2026{" "}
             <span className="text-secondary">NEJOUM ALJAZEERA</span> All Rights Reserved.
