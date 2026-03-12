@@ -2,10 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 import { servicesData } from "@/data/services";
 import { motion } from "framer-motion";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import img3 from "@/assets/services/service-sidebar.jpg";
 
 export default function ServiceSidebar() {
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   const location = useLocation();
 
   return (
@@ -13,7 +19,7 @@ export default function ServiceSidebar() {
       <div className="bg-[#f3f3f3] p-5 rounded-xl">
 
         <h3 className="text-xl md:text-2xl font-bold mb-6">
-          Our Services
+          {t("serviceSidebar.title")}
         </h3>
 
         <div className="space-y-6">
@@ -28,26 +34,28 @@ export default function ServiceSidebar() {
                 state={{ fromSidebar: true }}
               >
                 <motion.div
-                  whileHover={{ x: 6 }}
+                  whileHover={{ x: rtl ? -6 : 6 }}
                   transition={{ duration: 0.3 }}
                   className={`relative flex items-center justify-between h-14 overflow-hidden mb-4 transition-all duration-300 rounded-lg
-                  ${
-                    isActive
-                      ? "bg-primary text-white shadow-lg"
-                      : "bg-white text-primary"
-                  }`}
+                    ${
+                      isActive
+                        ? "bg-primary text-white shadow-lg"
+                        : "bg-white text-primary"
+                    }`}
                 >
-
-                  {/* Title */}
-                  <span className="pl-5 font-medium text-sm md:text-base">
-                    {service.title}
+                  <span
+                    className={`font-medium text-sm md:text-base ${
+                      rtl ? "pr-5 text-right" : "pl-5 text-left"
+                    }`}
+                  >
+                    {t(service.titleKey)}
                   </span>
 
-                  {/* Arrow Section */}
                   <div className="relative w-16 h-full flex items-center justify-center">
-                    <span className={`text-lg ${isActive ? "text-white" : "text-primary"}`}>→</span>
+                    <span className={`text-lg ${isActive ? "text-white" : "text-primary"}`}>
+                      {rtl ? "←" : "→"}
+                    </span>
                   </div>
-
                 </motion.div>
               </Link>
             );
@@ -67,14 +75,14 @@ export default function ServiceSidebar() {
 
           <div className="text-center px-8 py-7">
             <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug">
-              Let’s Discuss Your Needs
+              {t("serviceSidebar.cta.heading")}
             </h2>
-            <p className="text-white mt-3 text-sm">Tell us what you need, and our experts will get back to you with the right solution.</p>
+            <p className="text-white mt-3 text-sm">{t("serviceSidebar.cta.desc")}</p>
           </div>
 
           <div className="flex justify-center mt-2">
             <Link to="/contact" className="bg-white text-black px-5 py-3 rounded-md flex items-center gap-3 font-medium hover:bg-gray-200 transition">
-              Get a Quote
+              {t("serviceSidebar.cta.button")}
               <ArrowOutwardIcon />
             </Link>
           </div>

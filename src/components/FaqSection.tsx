@@ -3,28 +3,21 @@ import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
+
 import faqTop from "@/assets/faq01.jpg";
 import faqBottom from "@/assets/faq02.jpg";
 
-const faqs = [
-  {
-    question: "What Locations Do You Ship To And From?",
-    answer:
-      "Throughout these stages, contractors, engineers, and project managers collaborate to ensure successful project execution, adhering to timelines and budget constraints.",
-  },
-  {
-    question: "What Types Of Shipping Services Do You Offer?",
-    answer:
-      "We offer air freight, ocean freight, road transportation, warehousing, customs clearance, and end-to-end logistics management.",
-  },
-  {
-    question: "How Can I Get A Quote For My Shipment?",
-    answer:
-      "Simply contact us via our quote form or speak to our logistics advisor. We provide fast and accurate pricing.",
-  },
-];
 
 export default function FaqSection() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const faqs = t("faqSection.items", {
+    returnObjects: true,
+  }) as { question: string; answer: string }[];
+
   const [active, setActive] = useState(0);
 
   const toggle = (index: number) => {
@@ -39,15 +32,15 @@ export default function FaqSection() {
         <div>
 
           <p className="inline-block border border-primary text-primary px-4 py-2 rounded-md text-sm font-medium mb-6">
-            Frequently Asked Questions
+            {t("faqSection.badge")}
           </p>
 
           <h2 className="text-[27px] lg:text-[40px] font-bold leading-tight mb-6">
-            Find Your Shipping Answers Here: Tranzit FAQ
+            {t("faqSection.title")}
           </h2>
 
           <p className="text-gray-500 mb-10 max-w-xl text-sm md:text-base">
-            You can consider adding a sentence about Tranzit's commitment to providing excellent customer service throughout the shipping process.
+            {t("faqSection.description")}
           </p>
 
           {/* ACCORDION */}
@@ -125,7 +118,7 @@ export default function FaqSection() {
         </div>
 
         {/* RIGHT IMAGE LAYOUT */}
-        <div className="relative mt-16 md:mt-0 mb-8 md:mb-0 pl-0 md:pl-10">
+        <div className={`relative mt-16 md:mt-0 mb-8 md:mb-0 ${rtl ? "pl-0 md:pr-10" : "pl-0 md:pl-10"}`}>
 
           {/* Top Image */}
           <motion.img
@@ -141,10 +134,10 @@ export default function FaqSection() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="absolute -top-20 md:top-10 right-0 md:right-[-40px] bg-primary text-white px-5 md:px-10 py-8 rounded-xl shadow-xl w-[50%] md:w-auto text-center"
+            className={`absolute -top-20 md:top-10 ${rtl ? "left-0 md:left-[-40px]" : "right-0 md:right-[-40px]"} bg-primary text-white px-5 md:px-10 py-8 rounded-xl shadow-xl w-[50%] md:w-auto text-center`}
           >
             <h3 className="text-2xl md:text-4xl text-center font-bold">2M</h3>
-            <p className="text-sm mt-2">Deliver Goods Every Weeks</p>
+            <p className="text-sm mt-2">{t("faqSection.stats.deliveries")}</p>
           </motion.div>
 
           {/* Bottom Image */}
@@ -153,7 +146,7 @@ export default function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             src={faqBottom}
-            className="rounded-2xl w-[80%] -mt-12 ml-auto border-[6px] border-white relative z-[2]"
+            className={`rounded-2xl w-[80%] -mt-12 ${rtl ? "mr-auto" : "ml-auto"} border-[6px] border-white relative z-[2]`}
           />
 
           {/* Blue Stat Card */}
@@ -161,10 +154,10 @@ export default function FaqSection() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="absolute -bottom-10 md:bottom-10 left-30px] text-center bg-primary text-white px-10 py-8 rounded-xl shadow-xl z-[10]"
+            className={`absolute -bottom-10 md:bottom-10 left-30px] text-center bg-primary text-white px-10 py-8 rounded-xl shadow-xl z-[10]`}
           >
             <h3 className="text-2xl md:text-4xl font-bold">5M</h3>
-            <p className="text-sm mt-2">Happy Customer</p>
+            <p className="text-sm mt-2">{t("faqSection.stats.customers")}</p>
           </motion.div>
 
         </div>

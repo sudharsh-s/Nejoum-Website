@@ -198,6 +198,10 @@
   animation: marquee 15s linear infinite;
 }
 
+.marquee-rtl .marquee-track {
+  animation-direction: reverse;
+}
+
 .marquee-item {
   font-size: 33px;
   font-weight: 700;

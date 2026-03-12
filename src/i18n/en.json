@@ -9,116 +9,1133 @@
     "getQuote": "Get Quote",
     "cargoTracking": "Cargo Tracking"
   },
-  "hero": {
-    "title": "Trusted Vehicle Auction Warehouse and Export Hub",
-    "subtitle": "Secure vehicle storage, inspection, container loading, and international shipping for auction vehicles.",
-    "cta1": "Request Storage Space",
-    "cta2": "Get Shipping Quote"
+
+  "servicesSubMenu": {
+    "auction": { "title": "Auction Account Services" },
+    "towing": { "title": "Towing Services" },
+    "loading": { "title": "Vehicle Loading & Container Services" },
+    "warehouse": { "title": "Warehouse & Storage Services" },
+    "shipping": { "title": "Shipping Services" },
+    "customs": { "title": "Custom Clearance Services" },
+    "title": { "title": "Vehicle Title Services" }
   },
-  "stats": {
-    "vehicles": "Vehicles Processed",
-    "countries": "Countries Served",
-    "warehouses": "Warehouse Facilities",
-    "experience": "Years Experience"
-  },
-  "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive vehicle logistics solutions from auction to export",
-    "storage": {
-      "title": "Vehicle Storage & Yard Management",
-      "description": "Climate-controlled, monitored warehouse facilities with 24/7 security and surveillance systems."
-    },
-    "receiving": {
-      "title": "Auction Vehicle Receiving",
-      "description": "Efficient pickup and receiving of auction vehicles from all major auction houses nationwide."
-    },
-    "towing": {
-      "title": "Towing & Dispatch Coordination",
-      "description": "Professional towing and dispatch coordination for seamless vehicle pickup and delivery."
-    },
-    "container": {
-      "title": "Loading & Containerization",
-      "description": "Expert container loading with professional securing and lashing for safe ocean transit."
-    },
-    "trucking": {
-      "title": "Domestic Trucking",
-      "description": "Reliable domestic trucking services for vehicle transport across all major routes."
-    },
-    "shipping": {
-      "title": "International Shipping Support",
-      "description": "End-to-end shipping coordination to destinations across 50+ countries worldwide."
+
+  "home": {
+    "hero": {
+      "titleLine1": "Smart Logistics",
+      "titleLine2": "Seamless Growth",
+      "tagline1": "Your Growth, Our Logistics",
+      "tagline2": "Nationwide Reach, Local Care",
+      "ctaPrimary": "Get a Free Quote",
+      "ctaSecondary": "Explore Services",
+      "marquee": "NEJOUM AL JAZEERA - IAA MARKET ALLIANCE"
     }
   },
-  "whyChooseUs": {
-    "title": "Why Choose Us",
-    "subtitle": "Trusted by logistics companies and auction buyers worldwide",
+
+  "iaaAlliance": {
+    "title": "IAA Market Alliance",
+    "description": "We are proud to announce that <strong>Nejoum Al Jazeera</strong> is now the sole official Market Alliance of IAA in the UAE.",
+    "highlight": "Discover more about the benefits and how to register your account with IAA in the UAE.",
+    "button": "Read More"
+  },
+
+  "aboutStats": {
+    "badge": "About Us – Nejoum Logistics",
+    "title": "At Nejoum, we believe vehicle logistics should be the easiest part of your automotive business",
+    "description": "Our team handles every step with precision so our clients can focus on <strong>buying and selling vehicles while we manage the logistics.</strong>",
+    "cta": "Learn More",
+    "stats": {
+      "years": {
+        "title": "Years serving automotive businesses",
+        "description": "Providing reliable vehicle logistics solutions for dealers, exporters, and traders."
+      },
+      "vehicles": {
+        "title": "Vehicles Handled",
+        "description": "Successfully transported, loaded, and shipped to global destinations every year."
+      }
+    }
+  },
+
+  "missionSection": {
+    "badge": "Our Mission",
+    "quote": "From day one, our mission was simple: make buying, moving, and exporting vehicles across borders fast, transparent, and reliable.",
+    "author": "Adel Al Saadi",
+    "position": "CEO, Nejoum Al Jazeera"
+  },
+
+  "servicesSlider": {
+    "readMore": "Read More",
+    "items": [
+      {
+        "title": "Cargo Shipping",
+        "desc": "Reliable sea freight solutions for secure and cost-effective international vehicle and cargo transportation."
+      },
+      {
+        "title": "Air Freight",
+        "desc": "Fast and efficient air cargo services for urgent vehicle parts and documentation shipments worldwide."
+      },
+      {
+        "title": "Customs Brokerage",
+        "desc": "Smooth customs clearance services ensuring compliance and hassle-free import and export processes."
+      },
+      {
+        "title": "Warehouse Solutions",
+        "desc": "Secure vehicle storage, inspection, and consolidation services in strategically located facilities."
+      },
+      {
+        "title": "Freight Forwarding",
+        "desc": "End-to-end freight management with real-time coordination and global logistics expertise."
+      },
+      {
+        "title": "Towing Services",
+        "desc": "Professional vehicle towing and inland transportation with safety and reliability guaranteed."
+      }
+    ]
+  },
+
+  "locations": {
+    "badge": "Global Locations",
+    "title": "Our Global Network of Strategic Locations",
     "items": {
-      "secure": { "title": "Secure Warehouse Facilities", "description": "State-of-the-art security with 24/7 surveillance and climate-controlled storage." },
-      "experienced": { "title": "Experienced Vehicle Handling", "description": "Trained professionals with years of expertise in auction vehicle logistics." },
-      "global": { "title": "Global Export Support", "description": "Seamless shipping coordination to over 50 countries worldwide." },
-      "integrated": { "title": "Integrated Logistics Services", "description": "End-to-end solutions from auction pickup to international delivery." },
-      "reliable": { "title": "Reliable & Professional Team", "description": "Dedicated team committed to timely, damage-free vehicle handling." }
+      "newJersey": "New Jersey, USA",
+      "georgia": "Georgia, USA",
+      "texas": "Texas, USA",
+      "california": "California, USA",
+      "tacoma": "Tacoma, USA",
+      "korea": "South Korea",
+      "uae": "Sharjah, UAE",
+      "iraq": "Basra, Iraq",
+      "oman": "Muscat, Oman",
+      "cambodia": "Phnom Penh, Cambodia"
     }
   },
-  "whoWeServe": {
-    "title": "Who We Serve",
-    "subtitle": "Delivering excellence to a diverse range of clients",
-    "clients": {
-      "auction": "Auto Auction Buyers",
-      "dealers": "Car Dealers",
-      "exporters": "Exporters",
-      "fleet": "Fleet Operators",
-      "logistics": "Logistics Companies",
-      "private": "Private Vehicle Owners"
+
+  "awardsSection": {
+    "title": "Our Vehicle Care &",
+    "title1": "Transport Process",
+    "items": [
+      {
+        "title": "Vehicle Receiving & Documentation",
+        "desc": "Accurate vehicle receiving and documentation to ensure smooth logistics and traceability."
+      },
+      {
+        "title": "Car Storage",
+        "desc": "Secure and flexible storage solutions for short or long-term periods."
+      },
+      {
+        "title": "Vehicle Transport & Transshipment",
+        "desc": "Optimal transshipment facilities and seamless transit to international destinations."
+      },
+      {
+        "title": "Pre & Post-Delivery Inspection (PDI)",
+        "desc": "From washing and navigation installation to software updates, we handle everything from A to Z."
+      },
+      {
+        "title": "Long-Term Storage Maintenance (LTSM)",
+        "desc": "Maintaining tire pressure, battery condition, and cleanliness for long-term stored vehicles."
+      },
+      {
+        "title": "Final Delivery",
+        "desc": "Efficient last-mile vehicle delivery with professional coordination and care."
+      }
+    ]
+  },
+
+  "requestQuote": {
+    "badge": "Request a Quote",
+    "titleLine1": "Efficient, Safe, & Swift Logistics",
+    "titleHighlight": "SOLUTION!",
+    "features": [
+      "Trusted by global vehicle buyers and exporters",
+      "Reliable logistics network across ports and auctions",
+      "Transparent handling and shipment tracking",
+      "Dedicated support from booking to delivery"
+    ],
+    "cta": "Contact Us",
+    "form": {
+      "title": "Request a Quote",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "city": "City",
+      "state": "State",
+      "destination": "Destination",
+      "freightType": "Freight Type",
+      "submit": "Submit Request"
     }
   },
-  "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "From auction to your doorstep — a seamless process",
-    "steps": {
-      "step1": { "title": "Vehicle Purchased", "description": "Vehicle is purchased from auction houses across the country." },
-      "step2": { "title": "Arrives at Warehouse", "description": "Vehicle is transported and received at our secure warehouse facility." },
-      "step3": { "title": "Inspection & Documentation", "description": "Complete vehicle inspection, photography, and documentation." },
-      "step4": { "title": "Secure Storage", "description": "Vehicle is stored in our climate-controlled, secure facility." },
-      "step5": { "title": "Container Loading", "description": "Professional container loading with proper securing methods." },
-      "step6": { "title": "Export Shipping", "description": "Vehicle ships to its global destination with full tracking." }
+
+  "statsSection": {
+    "items": {
+      "vehiclesShipped": "Vehicles Shipped Annually",
+      "containersDelivered": "Containers Delivered Monthly",
+      "vehiclesDelivered": "Vehicles Delivered Monthly"
     }
   },
-  "warehouse": {
-    "title": "Our Warehouse Facilities",
-    "subtitle": "State-of-the-art storage and logistics infrastructure"
+
+  "testimonialSection": {
+    "badge": "Testimonial",
+    "title": "Our Customers Share Their Success Stories",
+    "items": [
+      {
+        "name": "Leslie Alexander",
+        "role": "Manager",
+        "text": "Nejoum has transformed our vehicle logistics with reliable and efficient solutions. Their team is responsive and always ensures timely deliveries. Highly recommended!"
+      },
+      {
+        "name": "Ronald Richards",
+        "role": "Manager",
+        "text": "Their logistics services improved our delivery speed and efficiency. A highly professional and dependable team that understands international vehicle shipping."
+      }
+    ]
   },
-  "about": {
-    "title": "Our Story",
-    "subtitle": "Building the future of vehicle logistics since 2010",
-    "description": "We are a global leader in auction vehicle logistics, providing secure storage, expert handling, and reliable export services to clients worldwide.",
-    "timeline": {
-      "t1": { "year": "2010", "title": "Company Founded", "description": "Started with a single warehouse and a vision to transform vehicle logistics." },
-      "t2": { "year": "2014", "title": "Warehouse Expansion", "description": "Expanded to 3 facilities covering over 500,000 sq ft of storage space." },
-      "t3": { "year": "2018", "title": "Export Growth", "description": "Reached 30+ export destinations with streamlined customs processing." },
-      "t4": { "year": "2024", "title": "Global Operations", "description": "Now serving 50+ countries with state-of-the-art logistics technology." }
+
+  "aboutHeader": {
+    "slides": [
+      {
+        "title": "World-Class\nLogistics",
+        "desc": "Strategically positioned near major international ports, delivering efficient global trade solutions."
+      },
+      {
+        "title": "Smart Supply\nChain Solutions",
+        "desc": "Optimized routes and advanced technology powering seamless logistics worldwide."
+      }
+    ],
+    "cta": "Explore Our Services"
+  },
+
+  "aboutSection": {
+    "title": "Trusted by the World’s Leading Companies for Over 23 Years",
+    "paragraph1": "We have been at the forefront of the global automotive auction and logistics industry. Our journey began with a clear mission — to bring <strong>transparency, efficiency, and trust</strong> into vehicle trading and logistics.",
+    "paragraph2": "Today, we proudly stand among the <strong>largest and most trusted automotive service providers across the Middle East and global markets</strong>, connecting buyers, sellers, dealers, and logistics partners through a powerful ecosystem built on reliability and innovation.",
+    "ceo": "Adel Al Saadi, CEO",
+
+    "stats": {
+      "branches": "Branches",
+      "countries": "Countries Covered",
+      "packages": "Delivered Packages"
+    },
+
+    "features": [
+      {
+        "title": "Trusted by Industry Leaders",
+        "desc": "We've earned the confidence of global brands through consistent delivery."
+      },
+      {
+        "title": "Expert Handling & Clearance",
+        "desc": "Seamless documentation and cargo handling from start to finish."
+      },
+      {
+        "title": "Digital Logistics Platform",
+        "desc": "Manage and optimize shipments with real-time tracking."
+      }
+    ]
+  },
+
+  "runningText": [
+    "Global Export",
+    "Transport",
+    "Global Import",
+    "Warehouse Storage",
+    "Logistics Solutions"
+  ],
+
+  "stickyStats": {
+    "badge": "Vehicle Logistics Experts",
+    "title": "Smart vehicle logistics built for global mobility",
+    "paragraph1": "We provide secure vehicle storage, efficient transportation, and complete pre-delivery inspection services designed to streamline automotive logistics across international markets.",
+    "paragraph2": "From short-term parking to long-term storage maintenance and cross-border vehicle transport, our solutions ensure your fleet remains safe, optimized, and ready for delivery at every stage.",
+    "stats": {
+      "experience": "Years of experience",
+      "employees": "Employees",
+      "offices": "Offices",
+      "countries": "Countries"
     }
   },
-  "contact": {
+
+  "faqSection": {
+    "badge": "Frequently Asked Questions",
+    "title": "Find Your Shipping Answers Here",
+    "description": "We are committed to providing excellent customer service throughout the entire vehicle shipping process.",
+    "items": [
+      {
+        "question": "What locations do you ship to and from?",
+        "answer": "We operate across the Middle East, Asia, Europe, and North America, connecting major ports and auction hubs worldwide."
+      },
+      {
+        "question": "What types of shipping services do you offer?",
+        "answer": "We offer air freight, ocean freight, road transportation, warehousing, customs clearance, and complete end-to-end vehicle logistics."
+      },
+      {
+        "question": "How can I get a quote for my shipment?",
+        "answer": "Simply contact us via our quote form or speak to one of our logistics advisors for fast and accurate pricing."
+      }
+    ],
+    "stats": {
+      "deliveries": "Deliver Goods Every Week",
+      "customers": "Happy Customers"
+    }
+  },
+
+  "quoteModal": {
+    "title": "Request a Quote",
+    "fields": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "city": "City"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "submit": "Submit Request"
+    }
+  },
+
+  "contactSection": {
     "title": "Contact Us",
-    "subtitle": "Get in touch for a custom logistics solution",
-    "name": "Full Name",
-    "email": "Email Address",
-    "phone": "Phone Number",
-    "service": "Select Service",
-    "message": "Your Message",
-    "send": "Send Message",
-    "info": {
-      "address": "1234 Logistics Blvd, Houston, TX 77001",
-      "phone": "+1 (555) 123-4567",
-      "email": "info@auctionlogistics.com"
+    "countries": {
+      "uae": "UAE",
+      "oman": "OMAN"
+    },
+    "labels": {
+      "email": "E-mail Address",
+      "phone": "Phone Number",
+      "location": "Our Location"
+    },
+    "form": {
+      "title": "Get In Touch",
+      "subtitle": "Send us a message and we will get back to you as soon as possible.",
+      "name": "Enter your name",
+      "email": "Enter your email",
+      "weight": "Enter weight in kg",
+      "service": "Choose type of service",
+      "pickup": "Choose pickup city",
+      "delivery": "Choose delivery city",
+      "submit": "Send Request"
     }
   },
+
+  "brandSlider": {
+    "title": "Trusted",
+    "highlight": "Partner"
+  },
+
+  "serviceHero": {
+    "slides": [
+      {
+        "title": "Seamless Shipping Across Land, Sea & Sky",
+        "subtitle": "Secure, scalable, and technology-driven warehouse solutions for global logistics."
+      },
+      {
+        "title": "Reliable Transport & Logistics Services",
+        "subtitle": "Professional service with proven results."
+      },
+      {
+        "title": "Solutions That Drive Results",
+        "subtitle": "Smart solutions for modern businesses."
+      }
+    ],
+    "buttons": {
+      "start": "Get Started",
+      "learn": "Learn More"
+    }
+  },
+
+  "serviceDetailPage": {
+    "sections": {
+      "keyBenefits": "Key Benefits",
+      "included": "What's Included",
+      "faq": "Frequently Asked Questions (FAQ)"
+    }
+  },
+
+  "serviceSidebar": {
+    "title": "Our Services",
+    "cta": {
+      "heading": "Let’s Discuss Your Needs",
+      "desc": "Tell us what you need, and our experts will get back to you with the right solution.",
+      "button": "Get a Quote"
+    }
+  },
+
+  "servicesDetails": {
+    "auction": {
+      "title": "Auction Account Services",
+
+      "intro1": "Get access to <b>auction accounts</b> to bid on your vehicles. <b>Nejoum</b> also offers <b>personalized training</b> to get you on board with different <b>US auctions</b>. We can <b>bid on your vehicle</b> based on your specific <b>target rate</b> at any US auction. Among the most common platforms are <b>Copart</b> and <b>IAAI</b>.",
+
+      "intro2": "Additionally, Nejoum provides <b>personalized training</b> to help your team confidently navigate auction platforms. We create auction accounts based on your <b>dealer license</b> at <b>no cost</b>. Our experienced Auction Accounts team works closely with <b>Copart</b> and <b>IAAI</b>, assisting clients with smooth and professional business account creation.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Auction Account Creation",
+          "desc": "We set up personalized auction accounts based on your dealer license, granting access to major US auctions like Copart and IAAI."
+        },
+        {
+          "icon": "anchor",
+          "title": "Personalized Training",
+          "desc": "Tailored training sessions to help you and your team understand auction platforms and bid confidently."
+        },
+        {
+          "icon": "car",
+          "title": "Bidding Assistance",
+          "desc": "Nejoum can place bids on your behalf according to your target price, ensuring you secure vehicles efficiently."
+        },
+        {
+          "icon": "security",
+          "title": "Expert Auction Guidance",
+          "desc": "Our team provides professional support and advice, helping you navigate auction rules, registration, and bidding strategies."
+        },
+        {
+          "icon": "cube",
+          "title": "Access to Exclusive Auctions",
+          "desc": "Gain entry to special auctions and pre-release vehicle listings for better opportunities."
+        },
+        {
+          "icon": "crown",
+          "title": "End-to-End Account Management",
+          "desc": "From account creation to bidding support, we manage the entire auction process for you."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Auction Account Creation",
+          "description": "We create personalized auction accounts for you based on your dealer license."
+        },
+        {
+          "title": "Personalized Training",
+          "description": "Our team provides tailored training sessions to help you navigate auctions efficiently."
+        },
+        {
+          "title": "Bidding on Your Behalf",
+          "description": "We can bid on vehicles for you according to your target rates."
+        },
+        {
+          "title": "Expert Auction Support",
+          "description": "Guidance, account management, and troubleshooting for smooth auction participation."
+        },
+        {
+          "title": "Access to Exclusive Auctions",
+          "description": "Access to special auctions and pre-release listings for competitive advantage."
+        }
+      ],
+
+      "highlightsTitle": "You can add a 5-step process visual on the page:",
+
+      "highlights": [
+        "Dealer License Verification",
+        "Auction Account Creation",
+        "Personalized Training & Platform Orientation",
+        "Bidding on Vehicles (Self or Assisted)",
+        "Purchase Confirmation & Account Management"
+      ],
+
+      "accordion": [
+        {
+          "title": "What is included in Nejoum's Auction Account Services?",
+          "content": [
+            "We provide complete support for account creation, personalized training, bidding assistance, and account management."
+          ]
+        },
+        {
+          "title": "Do you help with account setup for major US auctions?",
+          "content": [
+            "Yes. We create accounts for Copart, IAAI, and other major US auction platforms."
+          ]
+        },
+        {
+          "title": "Can Nejoum place bids on my behalf?",
+          "content": [
+            "Absolutely. We can bid on vehicles according to your target rates, helping you secure the vehicles you want without missing opportunities."
+          ]
+        },
+        {
+          "title": "Do you provide training for using auction platforms?",
+          "content": [
+            "Yes. We offer personalized training to familiarize you and your team with auction procedures, bidding strategies, and platform navigation."
+          ]
+        },
+        {
+          "title": "Can you help with account management after creation?",
+          "content": [
+            "Yes. We provide ongoing support for account updates, troubleshooting, and guidance to ensure your auction participation remains smooth and efficient."
+          ]
+        }
+      ]
+    },
+
+    "towing": {
+      "title": "Towing Services",
+
+      "intro1": "Nejoum provides <b>professional towing and vehicle pickup services across the United States</b>, ensuring your auction vehicles are transported safely from auction yards to designated loading facilities. Our experienced dispatch team coordinates vehicle pickups directly from major auction platforms including <b>Copart, IAAI, Manheim, RB Auction, and Adesa</b>. Whether the vehicle is purchased from an auction or sourced from a dealership, our team ensures secure handling, timely pickup, and smooth transport.",
+
+      "intro2": "With our strong logistics network across the US, we focus on <b>damage-free pickup, minimal storage charges, and efficient movement of vehicles to shipping locations</b>. Our goal is to make the entire process <b>fast, transparent, and hassle-free for buyers and dealers worldwide</b>.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Nationwide Coverage",
+          "desc": "Vehicle pickup services available across all US states with a trusted towing network."
+        },
+        {
+          "icon": "anchor",
+          "title": "Auction Expertise",
+          "desc": "Experienced handling of vehicles purchased from Copart, IAAI, Manheim, RB Auction, and other major auction platforms."
+        },
+        {
+          "icon": "car",
+          "title": "Fast Pickup Coordination",
+          "desc": "Vehicles are typically scheduled for pickup within 3 business days after receiving the required documents."
+        },
+        {
+          "icon": "security",
+          "title": "Damage-Free Handling",
+          "desc": "Professional towing equipment and trained operators ensure safe vehicle transport."
+        },
+        {
+          "icon": "cube",
+          "title": "Auction Storage Protection",
+          "desc": "Efficient pickup scheduling helps minimize or avoid auction storage fees."
+        },
+        {
+          "icon": "crown",
+          "title": "Real-Time Support",
+          "desc": "Dedicated support team available to assist customers with towing coordination and updates."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Auction Yard Pickup",
+          "description": "Vehicle collection directly from US auction yards."
+        },
+        {
+          "title": "Transport to Loading Facilities",
+          "description": "Safe delivery of vehicles to the nearest warehouse or export loading yard."
+        },
+        {
+          "title": "Dispatch & Coordination",
+          "description": "Professional dispatch team manages pickup scheduling and towing logistics."
+        },
+        {
+          "title": "Vehicle Type Handling",
+          "description": "Support for sedans, SUVs, and standard passenger vehicles purchased through auctions."
+        },
+        {
+          "title": "Condition Check Support",
+          "description": "Vehicles are inspected upon arrival at the yard and compared with auction images."
+        },
+        {
+          "title": "Pickup Status Updates",
+          "description": "Customers receive updates regarding vehicle pickup and transport progress."
+        }
+      ],
+
+      "highlightsTitle": "Towing Policy",
+
+      "highlights": [
+        "Pickup requests are scheduled after receiving the required <b>Bill of Sale, Title, or Work Order</b>.",
+        "Vehicles are typically collected <b>within 3 days of receiving the pickup request</b>.",
+        "If pickup is delayed beyond the scheduled period, storage responsibility may apply based on the service agreement.",
+        "The service applies mainly to <b>standard vehicles such as sedans and SUVs</b>.",
+        "Customers must report any condition discrepancies <b>within 48 hours</b> after the vehicle reaches the yard</b>.",
+        "Vehicle condition should always be compared with <b>auction photos upon arrival</b>."
+      ],
+
+      "accordion": [
+        {
+          "title": "How long does it take to pick up a vehicle from the auction?",
+          "content": [
+            "Once we receive the required documents (Bill of Sale, Title, or Work Order), the vehicle is usually picked up <b>within 3 business days</b>."
+          ]
+        },
+        {
+          "title": "Which auctions do you support for towing services?",
+          "content": [
+            "We coordinate towing from all major US auction platforms including <b>Copart, IAAI, Manheim, RB Auction, and Adesa</b>."
+          ]
+        },
+        {
+          "title": "Where will my vehicle be transported after pickup?",
+          "content": [
+            "Vehicles are transported to the <b>nearest export yard or loading facility</b> for further processing and international shipping."
+          ]
+        },
+        {
+          "title": "What type of vehicles can be towed?",
+          "content": [
+            "Our service mainly covers <b>sedans, SUVs, and standard passenger vehicles purchased from auctions</b>."
+          ]
+        },
+        {
+          "title": "What should I do if I find damage after the vehicle arrives at the yard?",
+          "content": [
+            "Customers must report any discrepancies between the vehicle and auction photos <b>within 48 hours</b> for investigation."
+          ]
+        }
+      ]
+    },
+
+    "loading": {
+      "title": "Vehicle Loading & Container Services",
+
+      "intro1": "Nejoum Auction provides professional <b>vehicle loading and container handling services</b> to ensure every vehicle is transported safely from the auction yard to its final shipping destination. Our experienced logistics team follows strict handling procedures to protect vehicles during loading and transit. Using secure equipment, protective materials, and professional loading techniques, we ensure vehicles are safely placed inside containers with maximum protection.",
+
+      "intro2": "Each vehicle is inspected and photographed during the loading process, providing full transparency and documentation for customers. Whether you are shipping a <b>single vehicle or multiple vehicles in a container</b>, Nejoum ensures a smooth and reliable shipping experience. Our goal is simple: <b>safe loading, damage handling, transport, and complete peace of mind for our customers.</b>",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Damage-Free Loading",
+          "desc": "Vehicles are carefully secured using protective materials and professional loading techniques to minimize movement and prevent damage during transit."
+        },
+        {
+          "icon": "anchor",
+          "title": "Professional Handling Team",
+          "desc": "Our trained loading specialists have extensive experience handling vehicles of different sizes including sedans, SUVs, trucks, and specialty vehicles."
+        },
+        {
+          "icon": "car",
+          "title": "Full Loading Documentation",
+          "desc": "Photos of every vehicle are taken during the loading process, allowing customers to track and verify vehicle condition before shipment."
+        },
+        {
+          "icon": "security",
+          "title": "Secure Container Transport",
+          "desc": "Vehicles are properly positioned and secured inside containers using chains, straps, and protective foam for maximum safety."
+        },
+        {
+          "icon": "cube",
+          "title": "Flexible Shipping Options",
+          "desc": "Ship a single vehicle or multiple vehicles in one container depending on your budget and shipping needs."
+        },
+        {
+          "icon": "crown",
+          "title": "Project Shipments",
+          "desc": "End-to-end logistics for complex industrial projects with dedicated project management."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Vehicle Inspection Before Loading",
+          "description": "Basic condition check and documentation before the loading process begins."
+        },
+        {
+          "title": "Professional Container Loading",
+          "description": "Vehicles are safely positioned inside containers using industry-standard securing methods."
+        },
+        {
+          "title": "Protective Equipment",
+          "description": "Use of straps, chains, wheel locks, and protective materials to ensure vehicle stability."
+        },
+        {
+          "title": "Loading Photo Documentation",
+          "description": "Photos taken during the loading process for transparency and customer verification."
+        },
+        {
+          "title": "Transport to Shipping Port",
+          "description": "Vehicles can be transported from the yard to the designated shipping port using trusted logistics partners."
+        },
+        {
+          "title": "Shipping Coordination Support",
+          "description": "Our team assists with container preparation and coordination for international vehicle shipment."
+        }
+      ],
+
+      "highlightsTitle": "How the Process Works",
+
+      "highlights": [
+        "<b>Vehicle Arrival</b>: Vehicle arrives at Nejoum yard from auction or seller.",
+        "<b>Inspection & Documentation</b>: Basic inspection and condition photos are taken.",
+        "<b>Container Preparation</b>: Container is prepared with protective materials and securing points.",
+        "<b>Professional Vehicle Loading</b>: Vehicles are carefully loaded and secured using straps, chains, and protection materials.",
+        "<b>Shipment to Port</b>: Container is transported to the shipping port for export."
+      ],
+
+      "accordion": [
+        {
+          "title": "Can I ship only one vehicle?",
+          "content": [
+            "Yes. You can ship a single vehicle using mix container shipping where multiple vehicles share one container."
+          ]
+        },
+        {
+          "title": "How are vehicles protected during loading?",
+          "content": [
+            "Vehicles are secured using chains, straps, and protective materials to prevent movement and ensure safe transit."
+          ]
+        },
+        {
+          "title": "Will I receive photos of my vehicle during loading?",
+          "content": [
+            "Yes. Our team documents the loading process and captures photos for verification and transparency."
+          ]
+        },
+        {
+          "title": "Can Nejoum arrange transportation to the shipping port?",
+          "content": [
+            "Yes. We provide logistics coordination and transportation support from the yard to the port."
+          ]
+        },
+        {
+          "title": "What types of vehicles can be shipped?",
+          "content": [
+            "Cars, SUVs, Pickup trucks, Luxury vehicles, Salvage vehicles and Commercial vehicles."
+          ]
+        }
+      ]
+    },
+
+    "warehouse": {
+      "title": "Warehouse & Storage Services",
+
+      "intro1": "We provide comprehensive warehousing and open yard storage solutions tailored to the needs of exporters, importers, auction companies, dealerships, and global logistics partners. Our strategically located facilities are designed to support high-volume vehicle handling, secure cargo management, and efficient international shipping preparation.",
+
+      "intro2": "From short-term holding to long-term storage, we ensure every vehicle is stored in a safe, organized, and professionally managed environment. Our open yard spaces accommodate oversized and specialized vehicles, while our secure warehouse facilities protect high-value units and sensitive cargo from environmental exposure.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Dedicated Storage Space",
+          "desc": "Secure warehouse and yard storage solutions for large cargo volumes and fleet management."
+        },
+        {
+          "icon": "anchor",
+          "title": "Consolidation & Deconsolidation",
+          "desc": "Efficient cargo consolidation and breakdown services to streamline inbound and outbound logistics."
+        },
+        {
+          "icon": "car",
+          "title": "Vehicle Storage Solutions",
+          "desc": "Specialized vehicle warehousing and open yard storage with organized lot management and secure handling."
+        },
+        {
+          "icon": "security",
+          "title": "Secure & Monitored Facilities",
+          "desc": "Controlled access warehouses and monitored yards designed to ensure maximum cargo protection."
+        },
+        {
+          "icon": "cube",
+          "title": "Oversized & Heavy Equipment Storage",
+          "desc": "Spacious yard areas for storing oversized vehicles, machinery, and irregular cargo safely."
+        },
+        {
+          "icon": "crown",
+          "title": "Integrated Logistics Support",
+          "desc": "Seamless coordination between storage, transport scheduling, and export preparation services."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Customizable Storage Plans",
+          "description": "Flexible short-term and long-term storage options for vehicles, machinery, containers, and general cargo tailored to your operational needs."
+        },
+        {
+          "title": "Advanced Security Infrastructure",
+          "description": "24/7 CCTV monitoring, controlled gated access, perimeter protection, and trained personnel to safeguard your assets at every stage."
+        },
+        {
+          "title": "High-Capacity Handling",
+          "description": "Spacious indoor warehouses and expansive open yards capable of accommodating cars, trucks, boats, heavy equipment, and industrial freight."
+        },
+        {
+          "title": "Prime Logistics Location",
+          "description": "Strategically positioned near major seaports, airports, and highways to reduce transit time and optimize shipping efficiency."
+        }
+      ],
+
+      "highlightsTitle": "How Our Warehouse Process Works",
+
+      "highlights": [
+        "<b>Cargo Arrival</b>: Vehicles or cargo arrive at our warehouse from auctions, dealerships, ports, or transport partners.",
+        "<b>Receiving & Inspection</b>: Each unit is logged, inspected, and documented with condition reports and photos.",
+        "<b>Inventory & Storage Allocation</b>: Cargo is organized and assigned to secure warehouse space or open yard storage based on type and requirements.",
+        "<b>Storage & Monitoring</b>: Units are safely stored under strict security protocols with continuous yard management and tracking.",
+        "<b>Dispatch & Outbound Coordination</b>: When ready, cargo is prepared, scheduled, and released for transport to port or final destination."
+      ],
+
+      "accordion": [
+        {
+          "title": "What types of cargo can be stored?",
+          "content": [
+            "We store vehicles including cars, SUVs, pickup trucks, commercial vehicles, salvage units, and selected heavy equipment depending on space availability."
+          ]
+        },
+        {
+          "title": "Are your warehouse facilities secure?",
+          "content": [
+            "Yes. Our facilities operate with controlled access, monitored yards, and organized inventory systems to ensure maximum protection."
+          ]
+        },
+        {
+          "title": "Do you provide inspection reports?",
+          "content": [
+            "Yes. Upon arrival, we conduct a basic inspection and provide condition photos for documentation and transparency."
+          ]
+        },
+        {
+          "title": "Can I request vehicle preparation services while in storage?",
+          "content": [
+            "Yes. We can coordinate services such as cleaning, battery support, minor preparation, and container loading preparation upon request."
+          ]
+        },
+        {
+          "title": "How do I schedule vehicle pickup or dispatch?",
+          "content": [
+            "Our logistics team coordinates outbound scheduling and transport once you confirm your shipment or delivery plan."
+          ]
+        }
+      ]
+    },
+
+    "shipping": {
+      "title": "Shipping Services",
+
+      "intro1": "Nejoum Auction provides reliable vehicle shipping services from the United States to destinations worldwide. Through our strong logistics network, we manage the entire process—from vehicle pickup at auction yards to international shipping and final delivery. Our team coordinates towing, yard handling, container loading, documentation, and global transport to ensure your vehicle moves safely and efficiently through every stage of the logistics process.",
+
+      "intro2": "With strategically located partner warehouses across the United States and strong partnerships with major shipping lines, Nejoum ensures your vehicles are handled professionally and shipped through the most efficient routes. Whether you are buying a single car or multiple vehicles from auctions like Copart and IAAI, our logistics support simplifies the entire export process for you.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Global Shipping Coverage",
+          "desc": "We ship vehicles from the United States to destinations worldwide through a trusted international logistics network."
+        },
+        {
+          "icon": "anchor",
+          "title": "End-to-End Logistics Management",
+          "desc": "From auction pickup to container loading and overseas shipping, Nejoum manages the entire process for you."
+        },
+        {
+          "icon": "car",
+          "title": "Strategic Warehouse Locations",
+          "desc": "Vehicles are transported to secure partner warehouses located across major U.S. logistics hubs."
+        },
+        {
+          "icon": "security",
+          "title": "Professional Vehicle Handling",
+          "desc": "Our experienced teams handle towing, loading, and container stuffing carefully to prevent damage."
+        },
+        {
+          "icon": "cube",
+          "title": "Reliable Shipping Routes",
+          "desc": "Strong partnerships with global shipping lines ensure dependable schedules and optimized transit routes."
+        },
+        {
+          "icon": "crown",
+          "title": "Customs Documentation Support",
+          "desc": "We assist with export documentation, customs clearance, and compliance requirements to ensure smooth international delivery."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Auction Pickup & Towing",
+          "description": "Vehicles are collected directly from auction yards and transported safely to designated warehouses."
+        },
+        {
+          "title": "Warehouse Storage & Handling",
+          "description": "Short-term storage and preparation before container loading."
+        },
+        {
+          "title": "Vehicle Inspection & Preparation",
+          "description": "Basic inspection and preparation to ensure vehicles are ready for international shipping."
+        },
+        {
+          "title": "Container Loading & Stuffing",
+          "description": "Vehicles are carefully loaded into containers using professional equipment."
+        },
+        {
+          "title": "International Shipping Coordination",
+          "description": "Booking with trusted shipping lines and managing the shipping process."
+        },
+        {
+          "title": "Documentation Support",
+          "description": "Assistance with export documents and shipping paperwork."
+        },
+        {
+          "title": "Tracking & Updates",
+          "description": "Clients receive updates during key shipping stages."
+        }
+      ],
+
+      "highlightsTitle": "You can add a 5-step process visual on the page:",
+
+      "highlights": [
+        "Buy Vehicle from Auction",
+        "Vehicle Pickup",
+        "Warehouse Handling",
+        "Container Loading",
+        "International Shipping"
+      ],
+
+      "accordion": [
+        {
+          "title": "Can Nejoum ship vehicles to any country?",
+          "content": [
+            "Yes. We ship vehicles from the United States to most international destinations through our global logistics network."
+          ]
+        },
+        {
+          "title": "Do you handle vehicle pickup from auctions?",
+          "content": [
+            "Yes. Our team arranges towing and pickup directly from auction yards such as Copart or IAAI."
+          ]
+        },
+        {
+          "title": "Can you ship multiple vehicles in one container?",
+          "content": [
+            "Yes. Multiple vehicles can be consolidated into a single container depending on vehicle size and shipping requirements."
+          ]
+        },
+        {
+          "title": "How long does international shipping take?",
+          "content": [
+            "Shipping time depends on the destination country, but typically ranges between 25 to 45 days including handling and transit time."
+          ]
+        },
+        {
+          "title": "Do you assist with export documentation?",
+          "content": [
+            "Yes. We support clients with necessary export documents and shipping paperwork to ensure smooth international delivery."
+          ]
+        }
+      ]
+    },
+
+    "customs": {
+      "title": "Custom Clearance Services",
+
+      "intro1": "Experience seamless <b>Custom Clearance Services</b> with Nejoum. Our expert team ensures a smooth and stress-free process from port arrival to final delivery, handling all documentation, compliance checks, and regulatory requirements. We begin the clearance process with a thorough <b>Notice for Arrival</b>, officially initiating your vehicle's journey toward export readiness.",
+
+      "intro2": "Nejoum is your trusted partner for efficient <b>vehicle customs clearance</b>. Our dedicated professionals manage every step—from documentation verification to regulatory compliance—ensuring your vehicles are cleared quickly and correctly. The process starts with a comprehensive <b>Notice for Arrival</b>, marking the beginning of a seamless and hassle-free clearance experience.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Comprehensive Clearance Coverage",
+          "desc": "We manage customs clearance for vehicles from the United States to international destinations, ensuring compliance with all import/export regulations."
+        },
+        {
+          "icon": "anchor",
+          "title": "End-to-End Clearance Management",
+          "desc": "From port arrival to final delivery, Nejoum handles every step of the customs process including documentation, duties, and compliance checks."
+        },
+        {
+          "icon": "car",
+          "title": "Document Verification & Audit",
+          "desc": "We review all vehicle titles and shipment documents to ensure they meet legal requirements for US and international customs clearance."
+        },
+        {
+          "icon": "security",
+          "title": "Risk & Compliance Control",
+          "desc": "Our team identifies potential title or documentation issues early to prevent delays, fines, or shipment rejection at customs."
+        },
+        {
+          "icon": "cube",
+          "title": "Efficient Clearance Processing",
+          "desc": "Optimized workflows and experienced staff ensure vehicles are cleared quickly, minimizing waiting time at ports and inspection delays."
+        },
+        {
+          "icon": "crown",
+          "title": "Customs Documentation Support",
+          "desc": "We assist with all necessary paperwork, export declarations, and compliance checks to guarantee a smooth international delivery process."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Comprehensive Clearance Management",
+          "description": "We handle all steps of the customs clearance process, including documentation, compliance checks, duties, and regulatory requirements to ensure smooth export."
+        },
+        {
+          "title": "Regulatory Compliance & Verification",
+          "description": "Our team verifies that all vehicle titles and shipment documents meet US and international regulations, preventing delays and penalties."
+        },
+        {
+          "title": "Fast & Efficient Processing",
+          "description": "From port arrival to final clearance, we expedite procedures with experienced staff and optimized workflows, minimizing waiting time for your vehicles."
+        },
+        {
+          "title": "Strategic Port & Logistics Coordination",
+          "description": "Located near major US seaports, we coordinate directly with port authorities and transport partners to streamline customs clearance and outbound shipping."
+        }
+      ],
+
+      "highlightsTitle": "You can add a 5-step process visual on the page:",
+
+      "highlights": [
+        "Vehicle Arrival at Port",
+        "Notice for Arrival & Documentation Initiation",
+        "Customs & Compliance Verification",
+        "Title & Export Clearance Processing",
+        "Final Release for International Delivery"
+      ],
+
+      "accordion": [
+        {
+          "title": "What is included in Nejoum's custom clearance services?",
+          "content": [
+            "We handle all steps of customs clearance including documentation verification, regulatory compliance, duties, and export approvals to ensure your vehicle is cleared efficiently."
+          ]
+        },
+        {
+          "title": "Do you manage title verification and export eligibility?",
+          "content": [
+            "Yes. Our team reviews vehicle titles and other required documents to confirm they meet US and international export regulations."
+          ]
+        },
+        {
+          "title": "Can Nejoum assist if a title is missing or has issues?",
+          "content": [
+            "Absolutely. We help obtain missing documents or resolve title discrepancies to make vehicles export-ready without delays."
+          ]
+        },
+        {
+          "title": "How long does the customs clearance process take?",
+          "content": [
+            "Processing times vary depending on port, documentation, and destination regulations, but our experienced team works to minimize delays."
+          ]
+        },
+        {
+          "title": "Do you provide guidance for compliance and documentation?",
+          "content": [
+            "Yes. We advise on required documents, export eligibility, and ensure all paperwork is complete to prevent customs issues."
+          ]
+        }
+      ]
+    },
+
+    "title": {
+      "title": "Vehicle Title Services",
+
+      "intro1": "Managing vehicle titles is one of the most important steps when purchasing vehicles from US auctions and exporting them internationally. A <b>Vehicle Title</b> is the official legal document that proves ownership of a vehicle and contains key information such as the <b>VIN number, make, model, and ownership history</b>.",
+
+      "intro2": "At <b>Nejoum Auction</b>, we provide complete <b>Title Management and Export Title Services</b> to ensure your vehicles are processed, cleared, and prepared for export <b>without delays or unnecessary costs</b>. Our experienced team works directly with auction houses to <b>track, verify, update, and process vehicle titles</b>, ensuring all documents meet the legal requirements for international shipping and customs clearance.",
+
+      "benefits": [
+        {
+          "icon": "inventory",
+          "title": "Fast Title Processing",
+          "desc": "Our team tracks vehicle titles directly from auctions to ensure they are received and processed quickly, reducing waiting time."
+        },
+        {
+          "icon": "anchor",
+          "title": "Export Compliance",
+          "desc": "We ensure that your vehicle titles meet international export regulations, avoiding customs delays or additional inspection charges."
+        },
+        {
+          "icon": "car",
+          "title": "Auction Integration",
+          "desc": "Nejoum works closely with major US auctions, allowing us to monitor title availability and update mailing instructions instantly."
+        },
+        {
+          "icon": "security",
+          "title": "Risk Reduction",
+          "desc": "Our experts review titles to identify issues such as liens, pending titles, or non-exportable conditions before shipping."
+        },
+        {
+          "icon": "cube",
+          "title": "End-to-End Support",
+          "desc": "From title tracking to export documentation, we handle the entire process so your vehicles move smoothly from auction to shipping."
+        },
+        {
+          "icon": "crown",
+          "title": "Title Transfer Management",
+          "desc": "We manage the title transfer process efficiently, ensuring proper ownership documentation is completed accurately and ready for export without delays."
+        }
+      ],
+
+      "features": [
+        {
+          "title": "Title Tracking & Follow-Up",
+          "description": "We track the title status of vehicles purchased at auctions and ensure they are mailed correctly to our processing locations."
+        },
+        {
+          "title": "Title Mailing Instruction Updates",
+          "description": "Once your vehicle is purchased, we update the auction system to send the title to the correct location for export processing."
+        },
+        {
+          "title": "Exportable Title Verification",
+          "description": "We verify that the vehicle title meets international export requirements before shipping."
+        },
+        {
+          "title": "Invalid Title Solutions",
+          "description": "If a vehicle title has issues or is missing documentation, we assist in obtaining the required paperwork to correct the problem."
+        },
+        {
+          "title": "Export Guidance",
+          "description": "Our team helps you understand the different title types and their eligibility for export, ensuring compliance with US and international regulations."
+        }
+      ],
+
+      "highlightsTitle": "Requirements for Title Processing",
+
+      "highlights": [
+        "<b>Proof of Ownership</b>: Bill of sale or previous title showing the ownership transfer.",
+        "<b>Vehicle Identification Number (VIN)</b>: Used to verify vehicle identity and history.",
+        "<b>Vehicle Inspection Report (if required)</b>: Certain cases may require inspection verification.",
+        "<b>Proof of Identity</b>: Government issued ID or passport.",
+        "<b>Title Processing Fees</b>: Fees vary depending on location and title requirements."
+      ],
+
+      "accordion": [
+        {
+          "title": "What is a vehicle title?",
+          "content": [
+            "A vehicle title is a legal document that proves ownership of a vehicle and includes important details such as VIN, make, model, and ownership history."
+          ]
+        },
+        {
+          "title": "Why is the title important for export?",
+          "content": [
+            "US customs require a valid title before vehicles can be loaded for international shipping. Without a proper title, vehicles may face delays or extra inspection."
+          ]
+        },
+        {
+          "title": "How long does it take to receive a vehicle title?",
+          "content": [
+            "Depending on the auction and vehicle status, titles can take a few days to several weeks to be issued."
+          ]
+        },
+        {
+          "title": "What happens if a title is missing or invalid?",
+          "content": [
+            "Our team assists in obtaining the necessary documents or corrections so the vehicle can become export eligible."
+          ]
+        },
+        {
+          "title": "Can salvage vehicles be exported?",
+          "content": [
+            "Yes, some salvage vehicles can be exported depending on the destination country’s import regulations."
+          ]
+        }
+      ]
+    }
+  },
+  
   "footer": {
-    "description": "Global leader in auction vehicle storage and export logistics.",
+    "description": "Our dedication lies in embracing challenges and pioneering innovation within the automotive logistics and vehicle export industry.",
+
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
-    "contactInfo": "Contact Info",
-    "rights": "All rights reserved."
+    "openingHours": "Opening Hours",
+
+    "weekdays": "Week Days",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "dayOff": "Day Off",
+
+    "contactUs": "Contact Us",
+
+    "copyright": "Copyright © 2026",
+    "company": "NEJOUM ALJAZEERA",
+    "rights": "All Rights Reserved."
   }
+
+
 }

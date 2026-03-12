@@ -10,41 +10,31 @@ import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
-const awards = [
-  {
-    title: "Vehicle Receiving & Documentation",
-    desc: "Accurate vehicle receiving and documentation to ensure smooth logistics and traceability.",
-    icon: DirectionsCarIcon,
-  },
-  {
-    title: "Car storage",
-    desc: "Secure and flexible storage solution for short or long-term periods.",
-    icon: EmojiTransportationIcon,
-  },
-  {
-    title: "Vehicle Transport and Transshipment",
-    desc: "Optimal transshipment facilities and transit to EU destinations.",
-    icon: LocalShippingIcon,
-  },
-  {
-    title: "Pre & Post-Delivery Inspection (PDI) Services",
-    desc: "From washing and installing navigation systems to software updates, we take care of everything from A to Z.",
-    icon: DocumentScannerIcon,
-  },
-  {
-    title: "Long Term Storage Maintenance (LTSM)",
-    desc: "For long-term storage: tire pressure, battery status, and cleaning in top condition.",
-    icon: WarehouseIcon,
-  },
-  {
-    title: "Final Delivery",
-    desc: "Efficient last-mile vehicle delivery with careful handling and professional coordination.",
-    icon: ThumbUpAltIcon,
-  },
+type AwardItem = {
+  title: string;
+  desc: string;
+};
+
+const awardIcons = [
+  DirectionsCarIcon,
+  EmojiTransportationIcon,
+  LocalShippingIcon,
+  DocumentScannerIcon,
+  WarehouseIcon,
+  ThumbUpAltIcon,
 ];
 
 const AwardsSection = () => {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const awards = t("awardsSection.items", {
+    returnObjects: true,
+  }) as AwardItem[];
+
   return (
     <section className="relative pt-12 md:pt-16 pb-16 md:pb-20 bg-[#f7f7f7] overflow-hidden">
 
@@ -57,7 +47,7 @@ const AwardsSection = () => {
               ● Awards & Recognition
             </p> */}
             <h2 className="text-[25px] md:text-[40px] font-bold leading-tight">
-              Our Vehicle Care & <br />Transport Process
+              {t("awardsSection.title")} <br />{t("awardsSection.title1")}
             </h2>
           </div>
 
@@ -74,6 +64,8 @@ const AwardsSection = () => {
 
         {/* Swiper Slider */}
         <Swiper
+          key={rtl ? "rtl" : "ltr"}
+          dir={rtl ? "rtl" : "ltr"}
           modules={[Navigation]}
           speed={600}
           navigation={{
@@ -91,7 +83,7 @@ const AwardsSection = () => {
           }}
         >
           {awards.map((item, index) => {
-            const Icon = item.icon;
+            const Icon = awardIcons[index];
 
             return (
               <SwiperSlide key={index} className="!h-auto flex">

@@ -1,78 +1,18 @@
 import { motion } from "framer-motion";
 import worldMap from "@/assets/map.webp";
+import { useTranslation } from "react-i18next";
 
 const locations = [
-  {
-    id: 1,
-    lat: 40.7069,
-    lng: -74.0532,
-    address: "New Jersey",
-  },
-  {
-    id: 2,
-    lat: 32.0809,
-    lng: -81.1910,
-    address: "Georgia",
-  },
-  {
-    id: 3,
-    lat: 25.6242,
-    lng: -95.2961,
-    address: "Texas",
-  },
-  {
-    id: 4,
-    lat: 33.8883,
-    lng: -118.3089,
-    address: "California",
-    offsetY: 0,
-  },
-  // {
-  //   id: 5,
-  //   lat: 27.8993,
-  //   lng: -118.2815,
-  //   address: "California",
-  //   offsetY: 18,
-  // },
-  {
-    id: 6,
-    lat: 45.2370,
-    lng: -122.4285,
-    address: "Tacoma",
-    offsetY: 0,
-  },
-  {
-    id: 7,
-    lat: 37.4563,
-    lng: 126.7052,
-    address: "Korea",
-  },
-    {
-    id: 8,
-    lat: 25.3463,
-    lng: 55.4209,
-    address: "UAE",
-  },
-  {
-    id: 9,
-    lat: 30.5085,
-    lng: 47.7804,
-    address: "Iraq",
-  },
-  {
-    id: 10,
-    lat: 23.5880,
-    lng: 58.3829,
-    address: "Oman",
-    offsetY: 10,
-  },
-  {
-    id: 11,
-    lat: 11.5564,
-    lng: 104.9282,
-    address: "Cambodia",
-  },
-
+  { id: 1, lat: 40.7069, lng: -74.0532, key: "newJersey" },
+  { id: 2, lat: 32.0809, lng: -81.1910, key: "georgia" },
+  { id: 3, lat: 25.6242, lng: -95.2961, key: "texas" },
+  { id: 4, lat: 33.8883, lng: -118.3089, key: "california" },
+  { id: 6, lat: 45.2370, lng: -122.4285, key: "tacoma" },
+  { id: 7, lat: 37.4563, lng: 126.7052, key: "korea" },
+  { id: 8, lat: 25.3463, lng: 55.4209, key: "uae" },
+  { id: 9, lat: 30.5085, lng: 47.7804, key: "iraq" },
+  { id: 10, lat: 23.5880, lng: 58.3829, key: "oman", offsetY: 10 },
+  { id: 11, lat: 11.5564, lng: 104.9282, key: "cambodia" }
 ];
 
 // Sharjah — Al Furat Street, Industrial Area 4, Sharjah, UAE 
@@ -97,6 +37,8 @@ const getPosition = (lat: number, lng: number) => {
 };
 
 export default function LocationSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative pt-10 pb-14 md:pb-1 bg-[#0b3574]">
       <div className="max-w-7xl mx-auto px-6">
@@ -109,11 +51,11 @@ export default function LocationSection() {
           className="mb-8"
         >
           <p className="text-md text-white mb-4 font-medium">
-            ● Global Locations
+            ● {t("locations.badge")}
           </p>
 
           <h2 className="text-[25px] md:text-4xl lg:text-[45px] font-bold text-white leading-tight">
-            Our Global Network of Strategic Locations
+            {t("locations.title")}
           </h2>
         </motion.div>
 
@@ -170,7 +112,7 @@ export default function LocationSection() {
                     }}
                   >
                     <span className="text-white text-xs md:text-sm font-semibold tracking-wide drop-shadow-lg">
-                      {loc.address}
+                      {t(`locations.items.${loc.key}`)}
                     </span>
                   </div>
                 </motion.div>
@@ -187,7 +129,7 @@ export default function LocationSection() {
               key={loc.id}
               className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-4 text-white text-sm font-medium"
             >
-              {loc.address}
+              {t(`locations.items.${loc.key}`)}
             </div>
           ))}
         </div>

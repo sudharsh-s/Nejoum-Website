@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import serviceSlider1 from "@/assets/services/service-slider-1.jpg";
 import serviceSlider2 from "@/assets/services/service-slider-2.jpg";
@@ -10,40 +12,27 @@ import serviceSlider4 from "@/assets/services/service-slider-4.jpg";
 import serviceSlider5 from "@/assets/services/service-slider-5.jpg";
 import serviceSlider6 from "@/assets/services/service-slider-6.png";
 
-const services = [
-  {
-    title: "Cargo Shipping",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider1,
-  },
-  {
-    title: "Air Freight",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider2,
-  },
-  {
-    title: "Customs Brokerage",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider3,
-  },
-  {
-    title: "Warehouse Solution",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider4,
-  },
-  {
-    title: "Freight Forwarding",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider5,
-  },
-  {
-    title: "Towing",
-    desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    img: serviceSlider6,
-  },
-];
-
 const ServicesSlider = () => {
+  type ServiceItem = {
+    title: string;
+    desc: string;
+  };
+
+  const serviceImages = [
+    serviceSlider1,
+    serviceSlider2,
+    serviceSlider3,
+    serviceSlider4,
+    serviceSlider5,
+    serviceSlider6,
+  ];
+
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+  const services = t("servicesSlider.items", {
+    returnObjects: true,
+  }) as ServiceItem[];
   return (
     <section className="bg-[#032d6b] py-16 md:py-24 overflow-hidden relative">
 
@@ -56,6 +45,7 @@ const ServicesSlider = () => {
 
       <div className="relative z-10 pl-7 md:pl-16 lg:pl-24">
         <Swiper
+          dir={rtl ? "rtl" : "ltr"}
           modules={[Navigation, Autoplay]}
           spaceBetween={70}
           slidesPerView={3}
@@ -91,7 +81,7 @@ const ServicesSlider = () => {
                   }}
                   className="flex items-center gap-2 cursor-pointer"
                 >
-                  <span className="text-white/80 text-sm md:text-base">Read More</span>
+                  <span className="text-white/80 text-sm md:text-base">{t("servicesSlider.readMore")}</span>
                   <span className="transition-transform group-hover:translate-x-2">
                     →
                   </span>
@@ -100,7 +90,7 @@ const ServicesSlider = () => {
                 {/* Image */}
                 <div className="overflow-hidden mt-8">
                   <motion.img
-                    src={service.img}
+                    src={serviceImages[index]}
                     alt={service.title}
                     className="w-full h-[200px] md:h-[280px] object-cover"
                     whileHover={{ scale: 1.05 }}

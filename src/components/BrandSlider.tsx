@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import "swiper/css";
 
@@ -30,15 +32,22 @@ const logos = [
 ];
 
 export default function BrandSlider() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   return (
     <section className="bg-white pt-10 md:pt-12 pb-6 md:pb-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <div className="text-center mb-1">
-          <h2 className="title">Trusted <span>Partner</span></h2>
+          <h2 className="title">
+            {t("brandSlider.title")}{" "}
+            <span>{t("brandSlider.highlight")}</span>
+          </h2>
           {/* <p className="text-gray-500 max-w-2xl mx-auto">Connecting businesses globally through strong and reliable partnerships.</p> */}
         </div>
 
         <Swiper
+          dir={rtl ? "rtl" : "ltr"}
           modules={[Autoplay, FreeMode]}
           slidesPerView={4}
           spaceBetween={60}

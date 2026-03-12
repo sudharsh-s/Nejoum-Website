@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
@@ -11,26 +13,28 @@ import bg1 from "@/assets/about/about-header-bg-1.jpg";
 import bg2 from "@/assets/about/about-header-bg-2.webp";
 // import person from "@/assets/about/about-header-person.png";
 
-const slides = [
-  {
-    title: "World-Class\nLogistics",
-    desc: "Strategically positioned near major international ports, delivering efficient global trade solutions",
-    bg: bg1,
-    // person: person,
-  },
-  {
-    title: "Smart Supply\nChain Solutions",
-    desc: "Optimized routes and advanced technology powering seamless logistics worldwide",
-    bg: bg2,
-    // person: person,
-  },
-];
 
 const AboutPageHeader = () => {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  type SlideItem = {
+    title: string;
+    desc: string;
+  };
+
+  const slides = t("aboutHeader.slides", {
+    returnObjects: true,
+  }) as SlideItem[];
+
+  const backgrounds = [bg1, bg2];
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
 
       <Swiper
+        key={rtl ? "rtl" : "ltr"}
+        dir={rtl ? "rtl" : "ltr"}
         modules={[Autoplay, EffectFade]}
         effect="fade"
         autoplay={{ delay: 3000 }}
@@ -44,12 +48,16 @@ const AboutPageHeader = () => {
 
               {/* Background */}
               <img
-                src={slide.bg}
+                src={backgrounds[index]}
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
+              <div className={`absolute inset-0 ${
+                rtl
+                  ? "bg-gradient-to-l from-black/60 via-black/40 to-black/20"
+                  : "bg-gradient-to-r from-black/60 via-black/40 to-black/20"
+              }`}></div>
 
               {/* Content Container */}
               <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex items-center">
@@ -70,7 +78,7 @@ const AboutPageHeader = () => {
                   </p>
 
                   <Link to="/services/auction-account-services" className="mt-8 bg-white text-black px-6 py-4 rounded-md inline-flex items-center gap-3 font-medium hover:bg-gray-200 transition">
-                    Explore Our Services
+                    {t("aboutHeader.cta")}
                     <ArrowOutwardIcon />
                   </Link>
                 </motion.div>

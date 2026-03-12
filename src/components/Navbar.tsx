@@ -46,13 +46,13 @@ const Navbar = () => {
   };
 
   const serviceSubmenu = [
-    { to: "/services/auction-account-services", label: "Auction Account Services" },
-    { to: "/services/towing-services", label: "Towing Services" },
-    { to: "/services/loading-services", label: "Loading Services" },
-    { to: "/services/warehouse-storage-services", label: "Warehouse & Storage Services" },
-    { to: "/services/shipping-services", label: "Shipping Services" },
-    { to: "/services/custom-clearance-services", label: "Custom Clearance Services" },
-    { to: "/services/title-services", label: "Title Services" },
+    { to: "/services/auction-account-services", label: t("servicesSubMenu.auction.title") },
+    { to: "/services/towing-services", label: t("servicesSubMenu.towing.title") },
+    { to: "/services/loading-services", label: t("servicesSubMenu.loading.title") },
+    { to: "/services/warehouse-storage-services", label: t("servicesSubMenu.warehouse.title") },
+    { to: "/services/shipping-services", label: t("servicesSubMenu.shipping.title") },
+    { to: "/services/custom-clearance-services", label: t("servicesSubMenu.customs.title") },
+    { to: "/services/title-services", label: t("servicesSubMenu.title.title") },
   ];
 
   const navLinks = [

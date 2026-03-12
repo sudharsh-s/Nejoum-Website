@@ -3,6 +3,8 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -12,24 +14,25 @@ import user1 from "@/assets/user/user-1.svg";
 import user2 from "@/assets/user/user-2.svg";
 import testimonial from "@/assets/user/testimonial-ft.jpg";
 
-const testimonials = [
-  {
-    name: "Leslie Alexander",
-    role: "Manager",
-    image: user1,
-    text: "TransHub has transformed our supply chain with their reliable and efficient logistics solutions. Their team is responsive and always goes the extra mile to ensure timely deliveries. Highly recommended!",
-  },
-  {
-    name: "Ronald Richards",
-    role: "Manager",
-    image: user2,
-    text: "Their logistics services improved our delivery speed and efficiency. A highly professional and reliable team that truly understands modern supply chains.",
-  },
-];
+
+type TestimonialItem = {
+  name: string;
+  role: string;
+  text: string;
+};
+
+const testimonialImages = [user1, user2];
 
 const TestimonialSection = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const testimonials = t("testimonialSection.items", {
+    returnObjects: true,
+  }) as TestimonialItem[];
 
   return (
     <section className="pt-12 md:pt-16 lg:pt-24 pb-16 md:pb-20 lg:pb-32 bg-white">
@@ -46,7 +49,13 @@ const TestimonialSection = () => {
           <div className="relative max-w-[80%] md:max-w-[354px] rounded-[0_50px_500px_500px]">
             
             {/* Orange Border Shape */}
-            <div className="bg-transparent border-[3px] border-primary rounded-[0_50px_500px_500px] top-[40px] -left-[40px] z-[1] absolute w-full h-full"></div>
+            <div className={`
+            bg-transparent border-[3px] border-primary
+            rounded-[0_50px_500px_500px]
+            top-[40px]
+            ${rtl ? "right-[40px] md:-right-[40px]" : "left-[40px] md:-left-[40px]"}
+            z-[1] absolute w-full h-full
+          `}></div>
 
             <img
               src={testimonial}
@@ -58,18 +67,24 @@ const TestimonialSection = () => {
 
         {/* RIGHT CONTENT */}
         <motion.div
-          className="w-full md:w-[70%] pl-0 md:pl-14 mt-10 md:mt-0"
+          className={`
+            w-full md:w-[70%] 
+            ${rtl ? "md:pr-14" : "md:pl-14"} 
+            pl-0 mt-10 md:mt-0
+          `}
         >
 
           <div className="hidden md:block">
-            <p className="text-md text-primary mb-4 font-medium">● Testimonial</p>
-            <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">Our Customers Share Their Success Stories</h2>
+            <p className="text-md text-primary mb-4 font-medium">● {t("testimonialSection.badge")}</p>
+            <h2 className="text-4xl lg:text-[40px] font-bold leading-tight">{t("testimonialSection.title")}</h2>
 
             <div className="border-t border-gray-300 my-4"></div>
           </div>
 
           {/* SLIDER */}
           <Swiper
+            key={rtl ? "rtl" : "ltr"}
+            dir={rtl ? "rtl" : "ltr"}
             modules={[Navigation, Autoplay]}
             slidesPerView={1}
             loop
@@ -127,7 +142,7 @@ const TestimonialSection = () => {
               {testimonials.map((item, i) => (
                 <img
                   key={i}
-                  src={item.image}
+                  src={testimonialImages[i]}
                   alt="thumb"
                   className="w-14 h-14 object-cover rounded-full border-2 border-white shadow"
                 />

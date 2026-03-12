@@ -5,6 +5,8 @@ import earthLines from "@/assets/earthline.webp";
 import { useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
+import { isRTL } from '@/i18n';
 
 const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -57,13 +59,24 @@ const AboutStatsSection = () => {
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  const { t } = useTranslation();
+
+  const { i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   const x = useTransform(
     scrollYProgress,
     [0, 1],
     screen === "mobile"
-      ? [-300, 50]
+      ? rtl
+        ? [300, -50]
+        : [-300, 50]
       : screen === "tablet"
-      ? [-600, 50]
+      ? rtl
+        ? [600, -50]
+        : [-600, 50]
+      : rtl
+      ? [800, -50]
       : [-800, 50]
   );
 
@@ -86,9 +99,9 @@ const AboutStatsSection = () => {
           {/* LEFT - Scroll Moving Truck */}
           <div>
             <p className="text-md text-primary mb-8 md:mb-4 font-medium">
-              ● About Us – Nejoum Logistics
+              ● {t("aboutStats.badge")}
             </p>
-            <motion.div style={{ x }} className="relative">
+            <motion.div style={{ x }} animate={{ scaleX: rtl ? -1 : 1 }} className="relative">
 
               <img
                 src={carImg}
@@ -107,15 +120,15 @@ const AboutStatsSection = () => {
           >
 
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-gray-900 !leading-tight mb-6 mt-6 md:mt-0">
-              At Nejoum, we believe vehicle logistics should be the easiest part of your automotive business
+              {t("aboutStats.title")}
             </h2>
 
             <p className="text-gray-600 mb-8 leading-relaxed text-sm md:text-base">
-              Our team handles every step with precision so our clients can focus on <b>buying and selling vehicles while we manage the logistics.</b>
+              <Trans i18nKey="aboutStats.description" />
             </p>
 
             <Link to="/about" className="inline-block gradient-primary text-white px-6 py-3 md:py-4 rounded-lg font-semibold transition">
-              Learn More
+              {t("aboutStats.cta")}
             </Link>
 
             {/* Stats */}
@@ -128,10 +141,10 @@ const AboutStatsSection = () => {
                 </h3>
                 <div>
                   <p className="font-semibold text-gray-800">
-                    Years serving eCommerce brands
+                    {t("aboutStats.stats.years.title")}
                   </p>
                   <p className="text-gray-500 text-xs md:text-sm">
-                    Providing reliable logistics solutions for online businesses
+                    {t("aboutStats.stats.years.description")}
                   </p>
                 </div>
               </div>
@@ -143,10 +156,10 @@ const AboutStatsSection = () => {
                 </h3>
                 <div>
                   <p className="font-semibold text-gray-800">
-                    Vehicles Handled
+                    {t("aboutStats.stats.vehicles.title")}
                   </p>
                   <p className="text-gray-500 text-xs md:text-sm">
-                    Successfully transported, loaded, and shipped to global destinations every year.
+                    {t("aboutStats.stats.vehicles.description")}
                   </p>
                 </div>
               </div>

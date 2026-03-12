@@ -4,6 +4,8 @@ import WarehouseIcon from "@mui/icons-material/Warehouse";
 import VerifiedUser from "@mui/icons-material/VerifiedUser";
 import Language from "@mui/icons-material/Language";
 import IAAMarketAlliance from "@/components/IAAMarketAlliance";
+import { useTranslation, Trans } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import img1 from "@/assets/about/about_sec-bg-1.png";
 import img2 from "@/assets/about/about_sec-bg-2.png";
@@ -41,6 +43,14 @@ const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) =
 
 
 const AboutSection = () => {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const features = t("aboutSection.features", {
+    returnObjects: true,
+  }) as { title: string; desc: string }[];
+  const featureIcons = [VerifiedUser, WarehouseIcon, Language];
+
   return (
     <section className="py-14 md:py-20 bg-[#f5f5f7] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -64,17 +74,17 @@ const AboutSection = () => {
             <div className="w-full lg:w-[55%]">
 
               <h2 className="text-[27px] md:text-[32px] lg:text-[40px] font-bold text-gray-900 leading-tight mb-6">
-                Trusted by the World’s Leading Companies for Over 23 Years
+                {t("aboutSection.title")}
               </h2>
 
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                We have been at the forefront of the global automotive auction and logistics industry. Our journey began with a clear mission — to bring <b>transparency, efficiency, and trust</b> into vehicle trading and logistics.
+                <Trans i18nKey="aboutSection.paragraph1" />
               </p>
               <p className="text-gray-600 leading-relaxed text-sm md:text-base mt-3">
-                Today, we proudly stand among the <b>largest and most trusted automotive service providers across the Middle East and global markets</b>, connecting buyers, sellers, dealers, and logistics partners through a powerful ecosystem built on reliability and innovation.
+                <Trans i18nKey="aboutSection.paragraph2" />
               </p>
 
-              <h5 className="text-lg font-bold text-gray-900 mt-4">Adel Al Saadi, CEO</h5>
+              <h5 className="text-lg font-bold text-gray-900 mt-4">{t("aboutSection.ceo")}</h5>
             </div>
           </div>
         </motion.div>
@@ -94,7 +104,7 @@ const AboutSection = () => {
                 <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
                   <Counter end={22} />+
                 </h3>
-                <p className="text-sm mt-2">Branches</p>
+                <p className="text-sm mt-2">{t("aboutSection.stats.branches")}</p>
               </div>
             </div>
           </div>
@@ -108,7 +118,7 @@ const AboutSection = () => {
                 <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
                   <Counter end={57} />+
                 </h3>
-                <p className="text-sm mt-2">Countries Covered</p>
+                <p className="text-sm mt-2">{t("aboutSection.stats.countries")}</p>
               </div>
             </div>
           </div>
@@ -122,7 +132,7 @@ const AboutSection = () => {
                 <h3 className="text-6xl md:text-6xl xl:text-8xl font-bold">
                   <Counter end={500} />k+
                 </h3>
-                <p className="text-sm mt-2">Delivered Packages</p>
+                <p className="text-sm mt-2">{t("aboutSection.stats.packages")}</p>
               </div>
             </div>
           </div>
@@ -133,24 +143,14 @@ const AboutSection = () => {
         {/* Bottom Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12 border-t border-l border-r divide-y divide-x-0 md:divide-y-0 md:divide-x divide-grey/10">
 
-          <Feature
-            icon={VerifiedUser}
-            title="Trusted by Industry Leaders"
-            desc="We've earned the confidence of global brands through consistent delivery."
-          />
-
-          <Feature
-            icon={WarehouseIcon}
-            title="Expert Handling & Clearance"
-            desc="Seamless documentation and cargo handling from start to finish."
-          />
-
-          <Feature
-            icon={Language}
-            title="Digital Logistics Platform"
-            desc="Manage and optimize shipments with real-time tracking."
-          />
-
+          {features.map((feature, index) => (
+            <Feature
+              key={index}
+              icon={featureIcons[index]}
+              title={feature.title}
+              desc={feature.desc}
+            />
+          ))}
         </div>
 
       </div>

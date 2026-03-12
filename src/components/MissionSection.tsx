@@ -2,8 +2,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import missionVideo from "@/assets/mission.mp4";
 import hagging_container from "@/assets/hagging_container.png";
+import { useTranslation } from "react-i18next";
 
 const MissionSection = () => {
+  const { t } = useTranslation();
 
   const imageRef = useRef(null);
 
@@ -41,7 +43,7 @@ const MissionSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Our Mission
+            {t("missionSection.badge")}
           </motion.p>
 
           <motion.h2
@@ -51,7 +53,7 @@ const MissionSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, delay: 0.5 }}
           >
-            “From day one, our mission was simple: make buying, moving, and exporting vehicles across borders fast, transparent, and reliable.”
+            {t("missionSection.quote")}
           </motion.h2>
 
           <motion.div
@@ -61,8 +63,8 @@ const MissionSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <p className="font-semibold text-lg">Adel Al Saadi</p>
-            <p className="text-sm opacity-70">CEO, Nejoum Al Jazeera</p>
+            <p className="font-semibold text-lg">{t("missionSection.author")}</p>
+            <p className="text-sm opacity-70">{t("missionSection.position")}</p>
           </motion.div>
 
         </div>

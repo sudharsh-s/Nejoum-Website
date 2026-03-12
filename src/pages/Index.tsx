@@ -49,6 +49,8 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div>
       {/* Hero */}
@@ -101,18 +103,18 @@ const Index = () => {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-10 md:leading-tight mb-6">
-              Smart Logistics <br />
-              Seamless Growth
+              {t("home.hero.titleLine1")} <br />
+              {t("home.hero.titleLine2")}
             </h1>
 
             <div className="grid md:flex items-center gap-3 md:gap-6 mb-8 text-white/70 text-sm">
               <span className='flex items-center gap-2'>
                 <span className="w-[20px] h-[20px] flex text-center justify-center items-center backdrop-blur-md bg-white/25 rounded-[4px]"><BoltIcon className='!text-xs' /> </span>
-                Your Growth, Our Logistics
+                {t("home.hero.tagline1")}
               </span>
               <span className='flex items-center gap-2'> 
                 <span className="w-[20px] h-[20px] flex text-center justify-center items-center backdrop-blur-md bg-white/25 rounded-[4px]"><PublicIcon className='!text-xs' /> </span> 
-                Nationwide Reach, Local Care
+                {t("home.hero.tagline2")}
               </span>
             </div>
 
@@ -121,7 +123,7 @@ const Index = () => {
                 to="/contact"
                 className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
               >
-                Get a Free Quote
+                {t("home.hero.ctaPrimary")}
                 <motion.span
                   initial={{ x: 0 }}
                   whileHover={{ x: 6 }}
@@ -136,7 +138,7 @@ const Index = () => {
                 to="/services/auction-account-services"
                 className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300"
               >
-                Explore Services
+                {t("home.hero.ctaSecondary")}
               </Link>
             </div>
           </motion.div>
@@ -157,7 +159,7 @@ const Index = () => {
               <div key={i} className="flex items-center gap-8">
                 
                 <h2 className="text-[60px] md:text-[70px] lg:text-[75px] font-extrabold text-white/60 whitespace-nowrap">
-                  NEJOUM AL JAZEERA - IAA MARKET ALLIANCE
+                  {t("home.hero.marquee")}
                 </h2>
 
               </div>

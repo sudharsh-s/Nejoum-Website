@@ -5,29 +5,31 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Language from "@mui/icons-material/Language";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import LocalShipping from "@mui/icons-material/LocalShipping";
+import { useTranslation } from "react-i18next";
 
 const stats = [
   {
     icon: Language,
     value: 150,
     suffix: "k+",
-    label: "Vehicles Shipped Annually",
+    key: "vehiclesShipped",
   },
   {
     icon: WorkspacePremiumIcon,
     value: 3000,
     suffix: "+",
-    label: "Containers Delivered Monthly",
+    key: "containersDelivered",
   },
   {
     icon: LocalShipping,
     value: 12000,
     suffix: "+",
-    label: "Vehicles Delivered Monthly",
+    key: "vehiclesDelivered",
   },
 ];
 
 export default function StatsSection() {
+  const { t } = useTranslation();
 
   const ref = useRef(null);
 
@@ -110,7 +112,7 @@ export default function StatsSection() {
 
                     {/* Label */}
                     <div className="text-black/80 text-sm mt-1">
-                      {stat.label}
+                      {t(`statsSection.items.${stat.key}`)}
                     </div>
 
                   </div>

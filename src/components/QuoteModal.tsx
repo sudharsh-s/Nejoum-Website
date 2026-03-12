@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 interface Props {
   open: boolean;
@@ -7,6 +9,9 @@ interface Props {
 }
 
 const QuoteModal = ({ open, onClose }: Props) => {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   return (
     <AnimatePresence>
       {open && (
@@ -32,7 +37,7 @@ const QuoteModal = ({ open, onClose }: Props) => {
             <div className="bg-white rounded-xl shadow-2xl w-full max-w-md p-4 md:p-6">
 
               <h3 className="text-[22px] md:text-[25px] font-bold mb-6 text-gray-900">
-                Request a Quote
+                {t("quoteModal.title")}
               </h3>
 
               <form className="space-y-4 md:space-y-6">
@@ -42,25 +47,25 @@ const QuoteModal = ({ open, onClose }: Props) => {
 
                   <input
                     type="text"
-                    placeholder="Full Name"
+                    placeholder={t("quoteModal.fields.fullName")}
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
                   />
 
                   <input
                     type="email"
-                    placeholder="Email Address"
+                    placeholder={t("quoteModal.fields.email")}
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
                   />
 
                   <input
                     type="tel"
-                    placeholder="Phone Number"
+                    placeholder={t("quoteModal.fields.phone")}
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
                   />
 
                   <input
                     type="text"
-                    placeholder="City"
+                    placeholder={t("quoteModal.fields.city")}
                     className="w-full border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"
                   />
 
@@ -93,15 +98,19 @@ const QuoteModal = ({ open, onClose }: Props) => {
                 </div> */}
 
                 {/* Submit */}
-                <div className="grid md:flex justify-end gap-3 md:gap-4 pt-4">
+                <div
+                  className={`grid md:flex justify-end gap-3 md:gap-4 pt-4 ${
+                    rtl ? "flex-row-reverse" : ""
+                  }`}
+                >
 
-                  <button type="button" onClick={onClose} className="px-6 py-3 rounded-lg bg-gray-200" > Cancel </button>
+                  <button type="button" onClick={onClose} className="px-6 py-3 rounded-lg bg-gray-200" > {t("quoteModal.buttons.cancel")} </button>
 
                   <button
                     type="submit"
                     className="flex items-center gap-2 gradient-primary text-white px-6 py-3 rounded-lg transition-all"
                   >
-                    Submit Request
+                    {t("quoteModal.buttons.submit")}
                     <ArrowOutwardIcon fontSize="small" />
                   </button>
 

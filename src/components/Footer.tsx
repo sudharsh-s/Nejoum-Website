@@ -3,11 +3,16 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import foooterBg from "@/assets/footer_bg.jpeg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   return (
     <footer className="relative text-white pt-10 md:pt-24 pb-5 md:pb-10">
 
@@ -32,7 +37,7 @@ const Footer = () => {
               </div>
 
               <p className="text-white/60 mb-6 leading-relaxed">
-                Our dedication lies in embracing challenges and pioneering innovation within the more attractive advertising sector.
+                {t("footer.description")}
               </p>
 
               {/* Social Icons */}
@@ -71,16 +76,16 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
               <h4 className="text-lg font-semibold mb-6">
-                Quick Links
+                {t("footer.quickLinks")}
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
               <ul className="space-y-2 md:space-y-3 text-white/80 md:text-white/60">
                 {[
-                  { label: "Home", path: "/" },
-                  { label: "About Us", path: "/about" },
-                  { label: "Our Services", path: "/services/auction-account-services" },
-                  { label: "Contact Us", path: "/contact" },
+                  { label: t("nav.home"), path: "/" },
+                  { label: t("nav.about"), path: "/about" },
+                  { label: t("nav.services"), path: "/services/auction-account-services" },
+                  { label: t("nav.contact"), path: "/contact" },
                 ].map((item, i) => (
                   <li key={i}>
                     <Link
@@ -97,28 +102,27 @@ const Footer = () => {
             {/* Services */}
             <div>
               <h4 className="text-lg font-semibold mb-6">
-                Our Services
+                {t("footer.ourServices")}
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
               <ul className="space-y-2 md:space-y-3 text-white/80 md:text-white/60">
                 {[
-                  { label: "Auction Account Services", path: "/services/auction-account-services" },
-                  { label: "Towing Services", path: "/services/towing-services" },
-                  { label: "Loading Services", path: "/services/loading-services" },
-                  { label: "Warehouse Storage Services", path: "/services/warehouse-storage-services" },
-                  { label: "Shipping Services", path: "/services/shipping-services" },
-                  { label: "Custom Clearance Services", path: "/services/custom-clearance-services" },
-                  { label: "Title Services", path: "/services/title-services" },
+                  { key: "servicesDetails.auction.title", path: "/services/auction-account-services" },
+                  { key: "servicesDetails.towing.title", path: "/services/towing-services" },
+                  { key: "servicesDetails.loading.title", path: "/services/loading-services" },
+                  { key: "servicesDetails.warehouse.title", path: "/services/warehouse-storage-services" },
+                  { key: "servicesDetails.shipping.title", path: "/services/shipping-services" },
+                  { key: "servicesDetails.customs.title", path: "/services/custom-clearance-services" },
+                  { key: "servicesDetails.title.title", path: "/services/title-services" },
                 ].map((service, i) => (
                   <li key={i}>
-                    <a
-                      href={service.path}
+                    <Link
+                      to={service.path}
                       className="hover:text-white transition"
-                      rel="noopener noreferrer"
                     >
-                      {service.label}
-                    </a>
+                      {t(service.key)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -126,27 +130,29 @@ const Footer = () => {
             {/* Opening Hours */}
             <div>
               <h4 className="text-lg font-semibold mb-6">
-                Opening Hours
+                {t("footer.openingHours")}
                 <span className="block w-10 h-[2px] bg-secondary mt-2"></span>
               </h4>
 
               <div className="space-y-2 md:space-y-3 text-white/80 md:text-white/60 mb-6">
                 <div className="flex justify-between">
-                  <span>Week Days</span>
+                  <span>{t("footer.weekdays")}</span>
                   <span>09.00 - 7.00</span>
                 </div>
+
                 <div className="flex justify-between">
-                  <span>Saturday</span>
+                  <span>{t("footer.saturday")}</span>
                   <span>08.00 - 2.00</span>
                 </div>
+
                 <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Day Off</span>
+                  <span>{t("footer.sunday")}</span>
+                  <span>{t("footer.dayOff")}</span>
                 </div>
               </div>
 
               <Link to="/contact" className="bg-secondary text-black px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
-                Contact Us <ArrowForwardIcon fontSize="small" />
+                {t("footer.contactUs")} <ArrowForwardIcon fontSize="small" />
               </Link>
             </div>
 
@@ -156,8 +162,8 @@ const Footer = () => {
         {/* Bottom Copyright */}
         <div className="flex flex-col md:flex-row justify-center items-center mt-10 text-white/60 text-sm relative z-10 px-5 md:px-0 text-center">
           <p>
-            Copyright © 2026{" "}
-            <span className="text-secondary">NEJOUM ALJAZEERA</span> All Rights Reserved.
+            {t("footer.copyright")}{" "}
+            <span className="text-secondary">{t("footer.company")}</span> {t("footer.rights")}
           </p>
         </div>
 

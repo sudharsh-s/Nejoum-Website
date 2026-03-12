@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Check } from "lucide-react";
 import ServiceAccordion from "@/components/ServiceAccordion";
 import ServiceSidebar from "@/components/ServiceSidebar";
+import { useTranslation } from "react-i18next";
 
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from "react";
@@ -51,27 +52,27 @@ export default function ServiceDetail() {
     crown: <WorkspacePremiumOutlinedIcon />,
   };
 
+  const { t } = useTranslation();
+
+  const translatedSlides = t("serviceHero.slides", {
+    returnObjects: true,
+  }) as { title: string; subtitle: string }[];
+
   const slides = [
     {
       type: "video",
       src: "/service-video.mp4",
-      title: "Seamless Shipping Across Land, Sea & Sky",
-      subtitle:
-        "Secure, scalable, and technology-driven warehouse solutions for global logistics.",
+      ...translatedSlides[0],
     },
     {
       type: "video",
       src: "/service-video.mp4",
-      title: "Reliable Transport & Logistics Services",
-      subtitle:
-        "Professional service with proven results.",
+      ...translatedSlides[1],
     },
     {
       type: "video",
       src: "/service-video.mp4",
-      title: "Solutions That Drive Results",
-      subtitle:
-        "Smart solutions for modern businesses.",
+      ...translatedSlides[2],
     },
   ];
 
@@ -85,6 +86,38 @@ export default function ServiceDetail() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const benefits = t(service.benefitsKey, { returnObjects: true }) as any[];
+  const features = t(service.featuresKey, { returnObjects: true }) as any[];
+  const highlights = t(service.highlightsKey, { returnObjects: true }) as string[];
+  const accordion = t(service.accordionKey, { returnObjects: true }) as any[];
+
+  const benefitStyles: any = {
+    inventory: {
+      bg: "bg-blue-100",
+      color: "text-blue-600",
+    },
+    anchor: {
+      bg: "bg-green-100",
+      color: "text-green-600",
+    },
+    car: {
+      bg: "bg-purple-100",
+      color: "text-purple-600",
+    },
+    security: {
+      bg: "bg-red-100",
+      color: "text-red-600",
+    },
+    cube: {
+      bg: "bg-yellow-100",
+      color: "text-yellow-600",
+    },
+    crown: {
+      bg: "bg-indigo-100",
+      color: "text-indigo-600",
+    },
+  };
 
   return (
     <>
@@ -151,14 +184,14 @@ export default function ServiceDetail() {
                 to="/contact"
                 className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition"
               >
-                Get Started
+                {t("serviceHero.buttons.start")}
               </Link>
 
               <Link
                 to="/about"
                 className="border border-white/40 bg-white/20 text-white px-8 py-4 rounded-xl hover:bg-white/10 transition"
               >
-                Learn More
+                {t("serviceHero.buttons.learn")}
               </Link>
 
             </div>
@@ -201,18 +234,18 @@ export default function ServiceDetail() {
 
             {/* TITLE */}
             <h2 className="text-[27px] md:text-[35px] leading-8 md:leading-10 font-bold mb-3 md:mb-5">
-              {service.title}
+              {t(service.titleKey)}
             </h2>
 
             {/* TEXT */}
             <p
               className="text-gray-500 text-sm md:text-base leading-5 md:leading-6 mb-6"
-              dangerouslySetInnerHTML={{ __html: service.introText }}
+              dangerouslySetInnerHTML={{ __html: t(service.introTextKey) }}
             />
 
             <p
               className="text-gray-500 text-sm md:text-base leading-5 md:leading-6 mb-6"
-              dangerouslySetInnerHTML={{ __html: service.introText1 }}
+              dangerouslySetInnerHTML={{ __html: t(service.introText1Key) }}
             />
 
             {service.gallery && (
@@ -229,38 +262,38 @@ export default function ServiceDetail() {
 
             <div className="mt-7 mb-10">
               <h3 className="text-xl text-gray-600 font-bold mb-6">
-                Key Benefits
+                {t("serviceDetailPage.sections.keyBenefits")}
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-5 md:gap-8">
         
-                {service.benefits?.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -6 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-[#f5f7fa] rounded-2xl p-6 shadow-sm hover:shadow-md transition"
-                  >
-                    <div className="flex items-center gap-5 mb-2">
-                      {/* Icon */}
-                      <div
-                        className={`w-14 h-14 rounded-xl flex items-center justify-center mb-3 ${item.bg} ${item.color}`}
-                      >
-                        {iconMap[item.icon]}
+                {benefits?.map((item, index) => {
+                  const style = benefitStyles[item.icon] || {};
+
+                  return (
+                    <motion.div
+                      key={index}
+                      whileHover={{ y: -6 }}
+                      transition={{ duration: 0.3 }}
+                      className="bg-[#f5f7fa] rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+                    >
+                      <div className="flex items-center gap-5 mb-2">
+                        <div
+                          className={`w-14 h-14 rounded-xl flex items-center justify-center ${style.bg} ${style.color}`}
+                        >
+                          {iconMap[item.icon]}
+                        </div>
+
+                        <h3 className="text-base font-semibold text-gray-800">
+                          {item.title}
+                        </h3>
                       </div>
-        
-                      {/* Title */}
-                      <h3 className="text-base font-semibold text-gray-800 mb-3">
-                        {item.title}
-                      </h3>
-                    </div>
-        
-                    {/* Description */}
-                    <p className="text-gray-500 leading-5 md:leading-relaxed text-sm md:text-base">
-                      {item.desc}
-                    </p>
-        
-                  </motion.div>
-                ))}
+
+                      <p className="text-gray-500 text-sm md:text-base">
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  );
+                })}
         
               </div>
             </div>
@@ -268,11 +301,11 @@ export default function ServiceDetail() {
             <div className="mt-10">
               {/* FEATURES */}
               <h3 className="text-xl text-gray-600 font-bold mb-4">
-                What's Included
+                {t("serviceDetailPage.sections.included")}
               </h3>
 
               <ul className="space-y-5 mb-8">
-                {service.features.map((item, i) => (
+                {features?.map((item, i) => (
                   <li key={i} className="flex gap-3 items-start">
                     <TaskAltIcon className="!w-5 !h-5 text-primary mt-1 shrink-0" />
 
@@ -291,11 +324,11 @@ export default function ServiceDetail() {
             <div>
               {/* FEATURES */}
               <h3 className="text-xl text-gray-600 font-bold mb-4">
-                {service.highlightsTitle}
+                {t(service.highlightsTitleKey)}
               </h3>
 
               <ul className="space-y-4 mb-8">
-                {service.highlights.map((item, i) => (
+                {highlights?.map((item, i) => (
                   <li key={i} className="flex gap-3 items-start">
                     <ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" />
 
@@ -323,9 +356,11 @@ export default function ServiceDetail() {
 
             <div className="mt-10">
               <h3 className="text-xl text-gray-600 font-bold mb-4">
-                Frequently Asked Questions (FAQ)
+                {t("serviceDetailPage.sections.faq")}
               </h3>
-              <ServiceAccordion items={service.accordion} />
+              {accordion && (
+                <ServiceAccordion items={accordion} />
+              )}
             </div>
           </div>
 
