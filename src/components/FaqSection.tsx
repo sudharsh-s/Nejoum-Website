@@ -136,7 +136,7 @@ export default function FaqSection() {
             transition={{ duration: 0.8 }}
             className={`absolute -top-20 md:top-10 ${rtl ? "left-0 md:left-[-40px]" : "right-0 md:right-[-40px]"} bg-primary text-white px-5 md:px-10 py-8 rounded-xl shadow-xl w-[50%] md:w-auto text-center`}
           >
-            <h3 className="text-2xl md:text-4xl text-center font-bold">2M</h3>
+            <h3 className="text-2xl md:text-4xl text-center font-bold">150k+</h3>
             <p className="text-sm mt-2">{t("faqSection.stats.deliveries")}</p>
           </motion.div>
 
@@ -156,7 +156,7 @@ export default function FaqSection() {
             transition={{ duration: 0.8 }}
             className={`absolute -bottom-10 md:bottom-10 left-30px] text-center bg-primary text-white px-10 py-8 rounded-xl shadow-xl z-[10]`}
           >
-            <h3 className="text-2xl md:text-4xl font-bold">5M</h3>
+            <h3 className="text-2xl md:text-4xl font-bold">100k+</h3>
             <p className="text-sm mt-2">{t("faqSection.stats.customers")}</p>
           </motion.div>
 
