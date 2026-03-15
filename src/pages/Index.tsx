@@ -155,7 +155,7 @@ const Index = () => {
         <div className="absolute bottom-6 left-0 w-full overflow-hidden marquee_home_sec">
           <div className="marquee_home flex items-center gap-8 bg[##191919a8]">
 
-            {[...Array(2)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <div key={i} className="flex items-center gap-8">
                 
                 <h2 className="text-[60px] md:text-[70px] lg:text-[75px] font-extrabold text-white/60 whitespace-nowrap">
@@ -170,9 +170,7 @@ const Index = () => {
       </section>
       
 
-      <div className='bg-white border border-white/20 rounded-2xl py-5 md:py-7 lg:py-10 px-5 md:px-5 lg:px-12 shadow-2xl relative w-[90%] md:w-[70%] mx-auto -mt-[40px] mb-[60px] iaaMartketing_home'>
-        <IAAMarketAlliance />
-      </div>
+      <StatsSection />
 
       <AboutStatsSection />
 
@@ -187,8 +185,6 @@ const Index = () => {
       <AwardsSection />
 
       <RequestQuote />
-
-      <StatsSection />
 
       <TestimonialSection />
 

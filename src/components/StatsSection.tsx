@@ -50,7 +50,7 @@ export default function StatsSection() {
     <section ref={ref} className="relative bg-white">
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-5 md:pt-20 pb-4 md:pb-7 lg:pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-4 md:pb-7 lg:pb-8 -top-[40px]">
 
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -59,7 +59,7 @@ export default function StatsSection() {
           className="bg-white border border-white/20 rounded-2xl py-3 md:py-7 lg:py-10 px-7 md:px-5 lg:px-12 shadow-2xl"
         >
 
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-x-0 md:divide-x divide-y md:divide-y-0 divide-black/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-x-0 md:divide-x rtl:md:divide-x-reverse divide-y md:divide-y-0 divide-black/20">
 
             {stats.map((stat, index) => {
 
